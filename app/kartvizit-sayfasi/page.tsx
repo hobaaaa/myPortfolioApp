@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Kartvizit Sayfası",
-  description:
-    "Deniz Gökbudak için oluşturulmuş dijital kartvizit sayfası."
+  description: "Deniz Gökbudak için oluşturulmuş dijital kartvizit sayfası.",
 };
 
 const profile = {
@@ -14,9 +14,10 @@ const profile = {
   phone: "05536662353",
   email: "info@denizgokbudak.com",
   website: "https://denizgokbudak.com",
-  linkedin: "https://linkedin.com/in/deniz-gokbudak",
-  instagram: "https://instagram.com/denizgokbudak",
-  facebook: "https://facebook.com/denizgokbudak"
+  linkedin: "https://www.linkedin.com/in/denizgokbudak/",
+  instagram: "https://www.instagram.com/gokbudakdeniz",
+  facebook: "https://www.facebook.com/deniz.gokbudak.1/",
+  profilFoto: "/profile.jpg",
 };
 
 const infoRows = [
@@ -24,13 +25,13 @@ const infoRows = [
   { label: "Soyad", value: profile.lastName },
   { label: "Telefon", value: profile.phone, href: `tel:${profile.phone}` },
   { label: "E-posta", value: profile.email, href: `mailto:${profile.email}` },
-  { label: "Websitesi", value: "denizgokbudak.com", href: profile.website }
+  { label: "Websitesi", value: "denizgokbudak.com", href: profile.website },
 ];
 
 const socialRows = [
   { label: "LinkedIn", value: profile.linkedin, href: profile.linkedin },
   { label: "Instagram", value: profile.instagram, href: profile.instagram },
-  { label: "Facebook", value: profile.facebook, href: profile.facebook }
+  { label: "Facebook", value: profile.facebook, href: profile.facebook },
 ];
 
 export default function BusinessCardPage() {
@@ -53,37 +54,47 @@ export default function BusinessCardPage() {
                   </div>
 
                   <div className="mt-8 flex items-start gap-5">
-                    <div className="flex h-28 w-28 shrink-0 items-center justify-center overflow-hidden rounded-[26px] border border-white/10 bg-[linear-gradient(145deg,rgba(20,81,181,0.85),rgba(77,182,244,0.55))] shadow-soft">
+                    <div className="flex shrink-0 items-center justify-center overflow-hidden rounded-[26px] border border-white/10 bg-[linear-gradient(145deg,rgba(20,81,181,0.85),rgba(77,182,244,0.55))] shadow-soft">
                       <div className="text-center">
-                        <p className="font-display text-4xl font-semibold tracking-tight text-white">
-                          DG
-                        </p>
-                        <p className="mt-1 text-[10px] uppercase tracking-[0.24em] text-sky-100/90">
-                          Fotoğraf Alanı
-                        </p>
+                        <Image
+                          src={profile.profilFoto}
+                          alt="Kullanıcı Profil Fotoğrafı"
+                          width={100}
+                          height={150}
+                        />
                       </div>
                     </div>
 
                     <div>
-                      <p className="eyebrow text-accent">Creative Digital Solutions</p>
+                      <p className="eyebrow text-accent">
+                        Creative Digital Solutions
+                      </p>
                       <h1 className="mt-3 font-display text-4xl font-semibold leading-tight text-white md:text-5xl">
                         {profile.firstName}
                         <br />
                         {profile.lastName}
                       </h1>
                       <p className="mt-3 max-w-md text-sm leading-7 text-slate-300">
-                        Web tasarım, landing page ve dijital sunum odaklı
-                        modern arayüz projeleri için hazırlanmış paylaşılabilir
-                        kartvizit sayfası.
+                        Kullanıcı dostu, modern ve yüksek performanslı
+                        full-stack web uygulamaları ile WordPress çözümleri
+                        geliştiriyoruz. İşletmenizin dijital dünyadaki varlığını
+                        güçlendirmek için fikirden yayına kadar tüm süreçte
+                        profesyonel yazılım çözümleri sunuyoruz.
                       </p>
                     </div>
                   </div>
 
                   <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                    <Link href={`tel:${profile.phone}`} className="button-primary">
+                    <Link
+                      href={`tel:${profile.phone}`}
+                      className="button-primary"
+                    >
                       Hemen Ara
                     </Link>
-                    <Link href={`mailto:${profile.email}`} className="button-secondary">
+                    <Link
+                      href={`mailto:${profile.email}`}
+                      className="button-secondary"
+                    >
                       E-posta Gönder
                     </Link>
                   </div>
@@ -95,14 +106,11 @@ export default function BusinessCardPage() {
                   <div className="mb-6 flex items-center justify-between gap-4">
                     <div>
                       <p className="eyebrow text-accent">İletişim Bilgileri</p>
-                      <h2 className="mt-2 font-display text-3xl font-semibold text-white">
-                        Tüm temel bilgiler tek ekranda
-                      </h2>
                     </div>
                     <div className="hidden h-px flex-1 bg-white/10 md:block" />
                   </div>
 
-                  <div className="space-y-3">
+                  <div className="space-y-1">
                     {infoRows.map((item) => (
                       <CardLine
                         key={item.label}
@@ -114,10 +122,10 @@ export default function BusinessCardPage() {
                   </div>
                 </div>
 
-                <div className="grid gap-6 md:grid-cols-[1fr_0.92fr]">
+                <div className="grid gap-6 ">
                   <div className="rounded-[32px] border border-white/10 bg-white/[0.03] p-6 md:p-8">
                     <p className="eyebrow text-accent">Sosyal Medya</p>
-                    <div className="mt-5 space-y-3">
+                    <div className="mt-5 space-y-1">
                       {socialRows.map((item) => (
                         <CardLine
                           key={item.label}
@@ -126,27 +134,6 @@ export default function BusinessCardPage() {
                           href={item.href}
                         />
                       ))}
-                    </div>
-                  </div>
-
-                  <div className="overflow-hidden rounded-[32px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] p-6 md:p-8">
-                    <p className="eyebrow text-accent">Kısa Not</p>
-                    <h3 className="mt-3 font-display text-3xl font-semibold text-white">
-                      QR ile hızlı erişim için tasarlandı
-                    </h3>
-                    <p className="mt-4 text-sm leading-7 text-slate-300">
-                      Bu sayfa doğrudan kartvizit QR&apos;ından açılacak şekilde
-                      kurgulandı. Kalan sosyal bağlantılar ve fotoğraf alanı
-                      daha sonra kolayca güncellenebilir.
-                    </p>
-
-                    <div className="mt-6 rounded-[24px] border border-accent/20 bg-[#071421]/78 p-5">
-                      <p className="text-xs uppercase tracking-[0.24em] text-sky-100/70">
-                        Açılan URL
-                      </p>
-                      <p className="mt-3 break-all font-medium text-white">
-                        denizgokbudak.com/kartvizit-sayfasi
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -162,28 +149,40 @@ export default function BusinessCardPage() {
 function CardLine({
   label,
   value,
-  href
+  href,
 }: {
   label: string;
   value: string;
   href?: string;
 }) {
+  // İçerik tasarımı (Artık en dıştaki boşlukları bu yönetmiyor)
   const content = (
-    <div className="flex flex-col gap-2 rounded-[22px] border border-white/10 bg-white/[0.03] px-4 py-4 transition duration-300 hover:-translate-y-0.5 hover:border-accent/28 hover:bg-white/[0.05] md:flex-row md:items-center md:justify-between">
+    <div className="flex flex-col gap-2 rounded-[22px] border border-white/10 bg-white/[0.03] px-4 py-4 transition duration-300 hover:-translate-y-0.5 hover:border-accent/28 hover:bg-white/[0.05] md:flex-row md:items-center md:justify-between h-full w-full">
       <span className="text-xs uppercase tracking-[0.2em] text-slate-400">
         {label}
       </span>
-      <span className="text-sm font-medium text-white md:text-right">{value}</span>
+      <span className="text-sm font-medium text-white md:text-right">
+        {value}
+      </span>
     </div>
   );
 
-  if (!href) {
-    return content;
-  }
-
+  // Her durumda en dışta aynı HTML yapısının (block element) kalması için
+  // bileşeni ortak bir div ile sarıyoruz ve boşluğu (pb-3) buraya veriyoruz.
   return (
-    <Link href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noreferrer" : undefined}>
-      {content}
-    </Link>
+    <div className="pb-3 last:pb-0 w-full block">
+      {href ? (
+        <Link
+          href={href}
+          target={href.startsWith("http") ? "_blank" : undefined}
+          rel={href.startsWith("http") ? "noreferrer" : undefined}
+          className="block"
+        >
+          {content}
+        </Link>
+      ) : (
+        content
+      )}
+    </div>
   );
 }
