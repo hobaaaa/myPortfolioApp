@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink text-white antialiased;
+  background-image:
+    radial-gradient(circle at 12% 12%, rgba(20, 81, 181, 0.24), transparent 24%),
+    radial-gradient(circle at 82% 10%, rgba(77, 182, 244, 0.18), transparent 20%),
+    radial-gradient(circle at 50% 60%, rgba(77, 182, 244, 0.08), transparent 26%),
+    linear-gradient(180deg, #06111d 0%, #081423 36%, #071019 100%);
+}
+
+* {
+  @apply border-line;
+}
+
+::selection {
+  background: rgba(77, 182, 244, 0.32);
+}
+
+@layer components {
+  .shell {
+    @apply mx-auto w-full max-w-7xl px-5 md:px-8;
+  }
+
+  .panel {
+    @apply rounded-[30px] border border-white/10 bg-white/[0.035] shadow-panel backdrop-blur-xl;
+  }
+
+  .section-space {
+    @apply py-14 md:py-20;
+  }
+
+  .eyebrow {
+    @apply text-[11px] font-semibold uppercase tracking-[0.34em] text-sky-200/75;
+  }
+
+  .heading-xl {
+    @apply font-display text-5xl font-semibold leading-[1] text-white md:text-7xl;
+  }
+
+  .heading-lg {
+    @apply font-display text-4xl font-semibold leading-[1.05] text-white md:text-6xl;
+  }
+
+  .body-lg {
+    @apply text-[15px] leading-7 text-slate-300 md:text-lg md:leading-8;
+  }
+
+  .button-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-slate-950 transition duration-300 hover:-translate-y-1 hover:bg-accentStrong hover:shadow-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white;
+  }
+
+  .button-secondary {
+    @apply inline-flex items-center justify-center rounded-full border border-sky-200/20 bg-sky-200/[0.06] px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:border-sky-200/35 hover:bg-sky-200/[0.12] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white;
+  }
+
+  .section-divider {
+    @apply border-t border-white/10;
+  }
+
+  .soft-line-card {
+    @apply rounded-[26px] border border-white/10 bg-white/[0.02] transition duration-300 hover:border-sky-300/25 hover:bg-white/[0.04];
+  }
+}

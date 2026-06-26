@@ -1,0 +1,11 @@
+.next/
+node_modules/
+out/
+dist/
+coverage/
+.vercel/
+.codex/
+.agents/
+*.log
+.DS_Store
+Thumbs.db
