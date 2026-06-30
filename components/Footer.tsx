@@ -1,11 +1,12 @@
-import { BrandLogo } from "@/components/BrandLogo";
 import Link from "next/link";
+import { BrandLogo } from "@/components/BrandLogo";
 
 const links = [
   { href: "/hizmetlerimiz", label: "Hizmetlerimiz" },
   { href: "/portfolio", label: "Projeler" },
   { href: "/hakkimizda", label: "Hakkımızda" },
-  { href: "/iletisim", label: "İletişim" }
+  { href: "/iletisim", label: "İletişim" },
+  { href: "/ucretsiz-web-sitesi-analizi", label: "Ücretsiz Analiz" }
 ];
 
 const socials = [
@@ -23,9 +24,9 @@ export function Footer() {
           <div className="max-w-xl">
             <BrandLogo className="mb-4" />
             <p className="text-sm leading-7 text-slate-400">
-              DG Digital; web tasarım, web geliştirme, WordPress, Next.js,
-              e-ticaret ve SaaS arayüzleri için premium sunum kalitesini teknik
-              disiplinle birleştiren dijital üretim partneridir.
+              DG Digital; web tasarım, web geliştirme, WordPress, Next.js, e-ticaret
+              ve SaaS arayüzleri için premium sunum kalitesini teknik disiplinle
+              birleştiren dijital üretim partneridir.
             </p>
           </div>
 

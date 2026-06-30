@@ -27,7 +27,10 @@ const proofItems = [
 export const metadata: Metadata = {
   title: "Hizmetlerimiz",
   description:
-    "Kurumsal web sitesi, landing page, modern arayüz ve teknik güçlendirme hizmetlerini inceleyin."
+    "Kurumsal web sitesi, landing page, modern arayüz ve teknik güçlendirme hizmetlerini inceleyin.",
+  alternates: {
+    canonical: "/hizmetlerimiz"
+  }
 };
 
 function ServicesHeroMockup() {

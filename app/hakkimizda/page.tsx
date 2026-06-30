@@ -8,7 +8,10 @@ import { values } from "@/data/values";
 export const metadata: Metadata = {
   title: "Hakkımızda",
   description:
-    "DG Digital yaklaşımını, çalışma biçimini ve profesyonel web tasarım odağını keşfedin."
+    "DG Digital yaklaşımını, çalışma biçimini ve profesyonel web tasarım odağını keşfedin.",
+  alternates: {
+    canonical: "/hakkimizda"
+  }
 };
 
 export default function AboutPage() {

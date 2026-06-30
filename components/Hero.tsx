@@ -84,7 +84,7 @@ export function Hero() {
   ];
 
   return (
-    <section className="relative pb-8 pt-2 md:pb-10 md:pt-10">
+    <section className="relative pb-8 pt-5 md:pb-10 md:pt-7">
       <div className="shell">
         <div className="grid items-center gap-8 lg:grid-cols-[0.96fr_1.04fr] lg:gap-10">
           <AnimatedSection className="relative">

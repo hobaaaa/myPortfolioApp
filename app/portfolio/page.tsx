@@ -45,7 +45,10 @@ const portfolioSupportCards = [
 export const metadata: Metadata = {
   title: "Projeler",
   description:
-    "DG Digital projelerini, arayüz yaklaşımını ve farklı sektörlerdeki web tasarım yönlerini inceleyin."
+    "DG Digital projelerini, arayüz yaklaşımını ve farklı sektörlerdeki web tasarım yönlerini inceleyin.",
+  alternates: {
+    canonical: "/portfolio"
+  }
 };
 
 export default function PortfolioPage() {

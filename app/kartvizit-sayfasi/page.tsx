@@ -4,7 +4,11 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Kartvizit Sayfası",
-  description: "Deniz Gökbudak için oluşturulmuş dijital kartvizit sayfası."
+  description: "Deniz Gökbudak için oluşturulmuş dijital kartvizit sayfası.",
+  robots: {
+    index: false,
+    follow: false
+  }
 };
 
 const profile = {
@@ -58,7 +62,7 @@ export default function BusinessCardPage() {
                       <div className="w-full text-center">
                         <Image
                           src={profile.profilFoto}
-                          alt="Kullanıcı Profil Fotoğrafı"
+                          alt="Deniz Gökbudak profil fotoğrafı"
                           width={100}
                           height={150}
                           className="h-auto w-full object-cover"

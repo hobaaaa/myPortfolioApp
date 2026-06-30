@@ -11,20 +11,26 @@ export function CTASection() {
             <div className="max-w-2xl">
               <p className="eyebrow text-mist">Bir Sonraki Adım</p>
               <h2 className="heading-lg mt-4">
-                Markanız dijitalde daha güçlü görünmeye hazırsa, doğru yerden
-                başlayalım.
+                Markanız dijitalde daha güçlü görünmeye hazırsa, doğru yerden başlayalım.
               </h2>
               <p className="body-lg mt-4">
-                Yeni bir site, dönüşüm odaklı landing page, e-ticaret deneyimi ya
-                da gelişen bir SaaS ürünü için birlikte net bir yol haritası
-                çıkaralım.
+                Yeni bir site, dönüşüm odaklı landing page, e-ticaret deneyimi ya da
+                gelişen bir SaaS ürünü için birlikte net bir yol haritası çıkaralım.
               </p>
             </div>
-            <div className="flex flex-col gap-4 sm:flex-row">
+            <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
               <Link href="/iletisim" className="button-primary">
                 Teklif Al
               </Link>
-              <Link href="https://wa.me/905536662353" className="button-secondary">
+              <Link href="/ucretsiz-web-sitesi-analizi" className="button-secondary">
+                Ücretsiz Analiz Al
+              </Link>
+              <Link
+                href="https://wa.me/905536662353"
+                className="button-secondary"
+                target="_blank"
+                rel="noreferrer"
+              >
                 WhatsApp ile Ulaş
               </Link>
             </div>

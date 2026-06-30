@@ -10,7 +10,7 @@ type PageHeroProps = {
 
 export function PageHero({ eyebrow, title, description, visual }: PageHeroProps) {
   return (
-    <section className="pb-7 pt-2 md:pb-9 md:pt-4">
+    <section className="pb-7 pt-5 md:pb-9 md:pt-7">
       <div className="shell">
         <div
           className={`grid gap-6 ${visual ? "lg:grid-cols-[0.94fr_1.06fr] lg:items-center" : ""}`}

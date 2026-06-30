@@ -35,6 +35,7 @@ const structuredData = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
+  applicationName: "DG Digital",
   title: {
     default: "DG Digital | Web Tasarım, Yazılım ve E-Ticaret Çözümleri",
     template: "%s | DG Digital"
@@ -81,6 +82,11 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "/"
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico"
   }
 };
 
@@ -98,7 +104,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         <Navbar />
-        <main className="relative z-10 overflow-hidden pt-[5.5rem] md:pt-[5.9rem]">
+        <main className="relative z-10 overflow-hidden pt-[6.4rem] md:pt-[6.9rem]">
           {children}
         </main>
         <Footer />

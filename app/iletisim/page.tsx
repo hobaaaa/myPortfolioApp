@@ -6,7 +6,10 @@ import { PageHero } from "@/components/PageHero";
 export const metadata: Metadata = {
   title: "İletişim",
   description:
-    "DG Digital ile iletişime geçin. Web tasarım, web geliştirme ve e-ticaret projeleriniz için teklif alın."
+    "DG Digital ile iletişime geçin. Web tasarım, web geliştirme ve e-ticaret projeleriniz için teklif alın.",
+  alternates: {
+    canonical: "/iletisim"
+  }
 };
 
 const fields = [

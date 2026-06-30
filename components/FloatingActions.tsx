@@ -37,6 +37,7 @@ export function FloatingActions() {
           href="https://wa.me/905536662353"
           target="_blank"
           rel="noreferrer"
+          aria-label="WhatsApp ile iletişime geç"
           className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-[#0a1626]/88 px-4 py-3 text-sm font-semibold text-white shadow-panel backdrop-blur-2xl transition duration-300 hover:-translate-y-1 hover:border-[#27d366]/35 hover:bg-[#0d2036]"
         >
           <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#27d366] text-white">
