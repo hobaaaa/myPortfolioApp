@@ -11,11 +11,13 @@ export function CTASection() {
             <div className="max-w-2xl">
               <p className="eyebrow text-mist">Bir Sonraki Adım</p>
               <h2 className="heading-lg mt-4">
-                Markanız dijitalde daha güçlü görünmeye hazırsa, doğru yerden başlayalım.
+                Markanız dijitalde daha güçlü görünmeye hazırsa, doğru yerden
+                başlayalım.
               </h2>
               <p className="body-lg mt-4">
                 Yeni bir site, dönüşüm odaklı landing page ya da mevcut yapınızın
-                daha üst seviyede yeniden tasarlanması için birlikte net bir yol haritası çıkaralım.
+                daha üst seviyede yeniden tasarlanması için birlikte net bir yol
+                haritası çıkaralım.
               </p>
             </div>
             <div className="flex flex-col gap-4 sm:flex-row">

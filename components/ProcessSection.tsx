@@ -36,7 +36,7 @@ export function ProcessSection() {
         <div className="mt-8 grid gap-4 lg:grid-cols-4">
           {steps.map((step, index) => (
             <AnimatedSection key={step.title} delay={index * 0.08}>
-              <div className="h-full rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] p-6">
+              <div className="h-full rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] p-6 transition duration-500 hover:-translate-y-1 hover:border-accent/25">
                 <div className="mb-5 flex items-center gap-3">
                   <span className="font-display text-3xl text-accent">0{index + 1}</span>
                   <div className="h-px flex-1 bg-white/10" />

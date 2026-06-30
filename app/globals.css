@@ -27,6 +27,15 @@ body {
   background: rgba(77, 182, 244, 0.32);
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 @layer components {
   .shell {
     @apply mx-auto w-full max-w-7xl px-5 md:px-8;
@@ -37,7 +46,7 @@ body {
   }
 
   .section-space {
-    @apply py-14 md:py-20;
+    @apply py-10 md:py-14;
   }
 
   .eyebrow {
@@ -45,11 +54,11 @@ body {
   }
 
   .heading-xl {
-    @apply font-display text-5xl font-semibold leading-[1] text-white md:text-7xl;
+    @apply font-display text-[2.6rem] font-semibold leading-[1.01] text-white md:text-[5rem];
   }
 
   .heading-lg {
-    @apply font-display text-4xl font-semibold leading-[1.05] text-white md:text-6xl;
+    @apply font-display text-3xl font-semibold leading-[1.06] text-white md:text-5xl;
   }
 
   .body-lg {
@@ -69,6 +78,15 @@ body {
   }
 
   .soft-line-card {
-    @apply rounded-[26px] border border-white/10 bg-white/[0.02] transition duration-300 hover:border-sky-300/25 hover:bg-white/[0.04];
+    @apply rounded-[26px] border border-white/10 bg-white/[0.02] transition duration-500 hover:-translate-y-1 hover:border-sky-300/25 hover:bg-white/[0.04];
+  }
+
+  .marquee-mask {
+    @apply overflow-hidden;
+  }
+
+  .marquee-track {
+    @apply flex w-max;
+    animation: marquee 26s linear infinite;
   }
 }

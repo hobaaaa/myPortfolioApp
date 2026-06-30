@@ -36,7 +36,10 @@ export default function PortfolioPage() {
             "Dönüşüm odaklı landing page kurgusu",
             "Premium marka sunumu ve responsive deneyim"
           ].map((item) => (
-            <div key={item} className="rounded-[28px] border border-white/10 bg-white/[0.03] p-7">
+            <div
+              key={item}
+              className="rounded-[28px] border border-white/10 bg-white/[0.03] p-7 transition duration-500 hover:-translate-y-1 hover:border-accent/25"
+            >
               <p className="font-display text-3xl font-semibold text-white">{item}</p>
             </div>
           ))}

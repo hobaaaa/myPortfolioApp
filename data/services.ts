@@ -10,79 +10,79 @@ export const services: Service[] = [
   {
     title: "Kurumsal Web Sitesi",
     summary:
-      "Markanızın ilk bakışta güven veren, premium ve düzenli görünmesini sağlayan kurumsal deneyimler tasarlıyorum.",
+      "Markanızı ilk bakışta güven veren, düzenli ve profesyonel gösteren kurumsal web siteleri tasarlıyor ve geliştiriyorum.",
     detail:
-      "Mesaj mimarisi, sayfa akışı, içerik düzeni ve teknik performansı aynı çatı altında ele alarak satış ekiplerinin de rahat kullanacağı bir dijital vitrin kuruyorum.",
+      "WordPress ya da Next.js tabanlı yapılarda; içerik akışı, görsel hiyerarşi, mobil deneyim ve teknik kaliteyi aynı sistem içinde kuruyorum.",
     deliverables: [
-      "Pozisyonlama ve içerik akışı",
+      "Kurumsal sayfa mimarisi",
       "Özel arayüz tasarımı",
-      "Hızlı ve SEO uyumlu altyapı"
+      "Hızlı ve indekslenebilir altyapı"
     ],
-    label: "Marka Vitrini"
+    label: "Kurumsal"
   },
   {
-    title: "Landing Page Tasarımı",
+    title: "Landing Page",
     summary:
-      "Reklam trafiğini boşa harcamayan, net mesaj veren ve tek hedefe odaklanan yüksek dönüşümlü sayfalar hazırlıyorum.",
+      "Reklam, kampanya veya belirli hizmetler için daha net teklif sunan ve aksiyon aldıran landing page yapıları hazırlıyorum.",
     detail:
-      "Kampanya yapısına uygun teklif akışı, güven öğeleri, CTA kurgusu ve görsel ritim ile ziyaretçiyi karar vermeye iten bir sayfa yapısı oluşturuyorum.",
+      "Başlık kurgusu, güven blokları, dönüşüm akışı ve mobil kullanım dengesi ile ziyaretçiyi karar adımına daha hızlı taşıyan sayfalar oluşturuyorum.",
     deliverables: [
-      "Teklif ve CTA kurgusu",
-      "Dönüşüm odaklı blok yapısı",
-      "A/B testine açık komponentler"
+      "Mesaj ve teklif akışı",
+      "Dönüşüm odaklı bölüm kurgusu",
+      "Reklam trafiğine uygun sayfa yapısı"
     ],
-    label: "Dönüşüm"
+    label: "Landing"
   },
   {
-    title: "E-Ticaret Deneyimi",
+    title: "E-Ticaret Sistemleri",
     summary:
-      "Ürün sunumu, koleksiyon düzeni ve satın alma akışına premium marka algısı ekleyen commerce arayüzleri kuruyorum.",
+      "Ürünlerinizi daha güçlü sunan, marka algısını yükselten ve satın alma sürecini sadeleştiren e-ticaret deneyimleri geliştiriyorum.",
     detail:
-      "Kategori yapısından ürün kartlarına, kampanya alanlarından mobil checkout deneyimine kadar her dokunuş satış kalitesini artıracak şekilde planlanır.",
+      "Koleksiyon yapısı, ürün kartları, mobil alışveriş akışı ve kampanya alanlarını birlikte ele alarak daha rafine bir satış vitrini kuruyorum.",
     deliverables: [
       "Kategori ve ürün sunumu",
-      "Mobil satış akışı",
-      "Kampanya ve merchandising alanları"
+      "Mobil alışveriş deneyimi",
+      "Kampanya ve koleksiyon alanları"
     ],
-    label: "Commerce"
+    label: "E-Ticaret"
   },
   {
-    title: "Özel Web Uygulaması",
+    title: "Özel Web Uygulamaları",
     summary:
-      "Sadece şık görünen değil, ekiplerin günlük iş akışına hız kazandıran panel ve araçlar geliştiriyorum.",
+      "Ekiplerin iş akışına hız katan paneller, yönetim ekranları ve süreç odaklı web uygulamaları geliştiriyorum.",
     detail:
-      "Operasyonel ihtiyaçları sadeleştiren dashboard, yönetim paneli ve müşteri ekranları için esnek ve sürdürülebilir bir ürün mantığı kuruyorum.",
+      "Sadece görsel olarak iyi duran değil, günlük kullanımda da iş çözen yönetim paneli ve özel ürün arayüzleri inşa ediyorum.",
     deliverables: [
-      "Dashboard ve panel tasarımı",
-      "Komponent tabanlı arayüz mimarisi",
-      "Geliştirilebilir kod altyapısı"
+      "Dashboard ve panel arayüzü",
+      "Özel kullanıcı akışları",
+      "Geliştirilebilir komponent yapısı"
     ],
-    label: "Operasyon"
+    label: "Uygulama"
   },
   {
-    title: "Teknik Güçlendirme",
+    title: "SaaS Ürün Arayüzleri",
     summary:
-      "Var olan sitenizi daha hızlı, daha güven veren ve daha iyi performans gösteren bir yapıya taşıyorum.",
+      "Randevu uygulamaları, üyelik sistemleri ve büyüyen ürün fikirleri için ölçeklenebilir SaaS arayüzleri tasarlıyorum.",
     detail:
-      "Core Web Vitals, sayfa hiyerarşisi, teknik SEO ve içerik düzeni tarafında görünmeyen ama dönüşümü doğrudan etkileyen katmanı güçlendiriyorum.",
+      "Ürün mantığı, onboarding akışı, panel düzeni ve kullanıcı etkileşimini sade bir tasarım diliyle çözerek yazılımı daha anlaşılır hale getiriyorum.",
     deliverables: [
-      "Hız ve teknik kalite analizi",
-      "UX ve içerik iyileştirmeleri",
-      "Performans odaklı yeniden düzenleme"
+      "SaaS ekran planlaması",
+      "Kullanıcı ve yönetici panelleri",
+      "Ürünleşmeye uygun arayüz sistemi"
     ],
-    label: "Optimization"
+    label: "SaaS"
   },
   {
-    title: "Sürekli İyileştirme",
+    title: "Bakım ve Geliştirme",
     summary:
-      "Yayına çıktıktan sonra da sitenizin güncel, kontrollü ve bakımlı kalması için düzenli destek veriyorum.",
+      "Yayına çıktıktan sonra da sitenizin güncel, kontrollü ve gelişime açık kalması için düzenli destek veriyorum.",
     detail:
-      "Yeni bölüm ekleme, içerik güncelleme, teknik bakım ve iteratif tasarım iyileştirmeleriyle siteyi yaşayan bir satış varlığı olarak yönetiyorum.",
+      "Yeni sayfa ekleme, içerik güncelleme, performans iyileştirme ve görsel düzenleme gibi işleri tek bir bakım akışı içinde yürütebiliyorum.",
     deliverables: [
       "Aylık geliştirme listesi",
-      "İçerik ve sayfa güncellemeleri",
+      "İçerik ve görsel güncellemeler",
       "Sürekli kalite kontrol"
     ],
-    label: "Retainer"
+    label: "Destek"
   }
 ];
