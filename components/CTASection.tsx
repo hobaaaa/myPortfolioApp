@@ -15,17 +15,17 @@ export function CTASection() {
                 başlayalım.
               </h2>
               <p className="body-lg mt-4">
-                Yeni bir site, dönüşüm odaklı landing page ya da mevcut yapınızın
-                daha üst seviyede yeniden tasarlanması için birlikte net bir yol
-                haritası çıkaralım.
+                Yeni bir site, dönüşüm odaklı landing page, e-ticaret deneyimi ya
+                da gelişen bir SaaS ürünü için birlikte net bir yol haritası
+                çıkaralım.
               </p>
             </div>
             <div className="flex flex-col gap-4 sm:flex-row">
               <Link href="/iletisim" className="button-primary">
                 Teklif Al
               </Link>
-              <Link href="/portfolio" className="button-secondary">
-                Projeleri Gör
+              <Link href="https://wa.me/905536662353" className="button-secondary">
+                WhatsApp ile Ulaş
               </Link>
             </div>
           </div>

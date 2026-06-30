@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
@@ -15,33 +16,63 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="Hakkımızda"
-        title="Amaç yalnızca site teslim etmek değil; markayı dijitalde daha iyi göstermek."
-        description="DG Digital, dark temalı modern tasarım dili, premium sunum anlayışı ve temiz geliştirme disipliniyle çalışan bağımsız bir dijital üretim pratiğidir."
+        title="Amacımız yalnızca site teslim etmek değil; markayı dijitalde daha güçlü konumlandırmak."
+        description="DG Digital, premium sunum anlayışı ve temiz geliştirme disipliniyle ajans mantığında ilerleyen bir dijital üretim yapısıdır."
       />
 
       <section className="section-space">
-        <div className="shell grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
+        <div className="shell grid gap-8 lg:grid-cols-[1fr_1fr] lg:items-center">
           <div className="rounded-[30px] border border-white/10 bg-white/[0.035] p-8 shadow-panel backdrop-blur-xl md:p-10">
             <SectionTitle
-              eyebrow="Yaklaşım"
-              title="Şık görünen ekranlar kadar, güven veren akışlar da önemli."
-              description="Bu yüzden her projede tasarım, içerik sıralaması, boşluk dengesi, görsel ton ve teknik altyapı birlikte ele alınır."
+              eyebrow="Kiminle Çalışıyorsunuz?"
+              title="Ekranın arkasında, işi doğrudan üreten gerçek bir iletişim vardır."
+              description="Bu yapı büyük ekip karmaşası yaratmadan; tasarım, geliştirme ve stratejik kararların aynı çatı altında ilerlemesini sağlar."
             />
-            <p className="body-lg mt-6">
-              Hedefim; ziyaretçiye ilk bakışta profesyonellik hissi veren,
-              markayı daha ciddi gösteren ve iletişim kurma isteğini artıran
-              dijital deneyimler üretmek.
-            </p>
+            <div className="mt-6 grid gap-4 sm:grid-cols-3">
+              <div className="rounded-[24px] border border-white/10 bg-white/[0.03] p-4">
+                <p className="text-sm font-semibold text-white">Küçük Hikâye</p>
+                <p className="mt-2 text-sm leading-6 text-slate-300">
+                  Tasarım ve yazılımı aynı disiplin içinde ele alan üretim yaklaşımı.
+                </p>
+              </div>
+              <div className="rounded-[24px] border border-white/10 bg-white/[0.03] p-4">
+                <p className="text-sm font-semibold text-white">Çalışma Yaklaşımı</p>
+                <p className="mt-2 text-sm leading-6 text-slate-300">
+                  Gereksiz kalabalık yerine net kararlar, hızlı geri dönüş ve yüksek kalite.
+                </p>
+              </div>
+              <div className="rounded-[24px] border border-white/10 bg-white/[0.03] p-4">
+                <p className="text-sm font-semibold text-white">Misyon</p>
+                <p className="mt-2 text-sm leading-6 text-slate-300">
+                  Markalara daha profesyonel, daha güçlü ve daha güvenilir bir dijital vitrin kazandırmak.
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div className="rounded-[30px] border border-white/10 bg-[linear-gradient(180deg,rgba(20,81,181,0.18),rgba(255,255,255,0.02))] p-8 md:p-10">
-            <p className="eyebrow text-accent">Odak Alanları</p>
-            <ul className="mt-6 space-y-4 text-slate-300">
-              <li>Kurumsal web tasarım</li>
-              <li>Landing page stratejisi ve tasarımı</li>
-              <li>Dark tema ve premium görsel yön</li>
-              <li>Temiz arayüz geliştirme</li>
-            </ul>
+          <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-[linear-gradient(180deg,rgba(20,81,181,0.18),rgba(255,255,255,0.02))] p-4 shadow-panel">
+            <div className="relative aspect-[4/4.8] overflow-hidden rounded-[26px]">
+              <Image
+                src="/profile.jpg"
+                alt="DG Digital kurucusu Deniz Gökbudak"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 40vw, 100vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#071320] via-transparent to-transparent" />
+            </div>
+            <div className="absolute bottom-8 left-8 right-8 rounded-[24px] border border-white/10 bg-[#071320]/80 p-5 backdrop-blur">
+              <p className="text-xs uppercase tracking-[0.22em] text-sky-100/80">
+                Kurucu . Gelecekte profesyonel portre ile güncellenebilir
+              </p>
+              <h2 className="mt-2 font-display text-2xl font-semibold text-white">
+                Deniz Gökbudak
+              </h2>
+              <p className="mt-2 text-sm leading-7 text-slate-300">
+                Web tasarım, WordPress ve Next.js ekseninde çalışan; estetik
+                kararları teknik kaliteyle birleştiren üretim yaklaşımı.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -51,7 +82,7 @@ export default function AboutPage() {
           <SectionTitle
             eyebrow="İlkeler"
             title="Kararları yöneten temel yaklaşım."
-            description="Her işte kaliteyi koruyan birkaç temel prensip bulunur."
+            description="Her projede kaliteyi koruyan birkaç net ilke bulunur."
           />
           <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {values.map((value) => (

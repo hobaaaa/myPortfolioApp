@@ -12,6 +12,7 @@ html {
 
 body {
   @apply bg-ink text-white antialiased;
+  overflow-x: clip;
   background-image:
     radial-gradient(circle at 12% 12%, rgba(20, 81, 181, 0.24), transparent 24%),
     radial-gradient(circle at 82% 10%, rgba(77, 182, 244, 0.18), transparent 20%),
@@ -46,7 +47,7 @@ body {
   }
 
   .section-space {
-    @apply py-10 md:py-14;
+    @apply py-9 md:py-12;
   }
 
   .eyebrow {
@@ -54,7 +55,7 @@ body {
   }
 
   .heading-xl {
-    @apply font-display text-[2.6rem] font-semibold leading-[1.01] text-white md:text-[5rem];
+    @apply font-display text-[2.8rem] font-semibold leading-[1.01] text-white md:text-[5rem];
   }
 
   .heading-lg {
@@ -78,7 +79,7 @@ body {
   }
 
   .soft-line-card {
-    @apply rounded-[26px] border border-white/10 bg-white/[0.02] transition duration-500 hover:-translate-y-1 hover:border-sky-300/25 hover:bg-white/[0.04];
+    @apply rounded-[26px] border border-white/10 bg-white/[0.02] transition duration-500 hover:-translate-y-1 hover:border-sky-300/25 hover:bg-white/[0.04] hover:shadow-[0_18px_50px_rgba(8,21,37,0.24)];
   }
 
   .marquee-mask {

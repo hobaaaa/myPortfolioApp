@@ -6,7 +6,7 @@ import { PageHero } from "@/components/PageHero";
 export const metadata: Metadata = {
   title: "İletişim",
   description:
-    "DG Digital ile iletişime geçin. Web tasarım, arayüz geliştirme ve landing page projeleriniz için teklif alın."
+    "DG Digital ile iletişime geçin. Web tasarım, web geliştirme ve e-ticaret projeleriniz için teklif alın."
 };
 
 const fields = [
@@ -31,16 +31,19 @@ export default function ContactPage() {
       <PageHero
         eyebrow="İletişim"
         title="Projenizi birlikte netleştirelim."
-        description="Kısa bir özet bırakın; size uygun yapı, kapsam ve görsel yön için hızlıca dönüş sağlayayım."
+        description="Kısa bir özet bırakın; size uygun yapı, kapsam ve görsel yön için hızlıca geri dönüş sağlayalım."
       />
 
       <section className="pb-14 md:pb-18">
         <div className="shell grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
-          <form className="rounded-[30px] border border-white/10 bg-white/[0.035] p-8 shadow-panel backdrop-blur-xl md:p-10" aria-label="İletişim formu">
+          <form
+            className="rounded-[30px] border border-white/10 bg-white/[0.035] p-8 shadow-panel backdrop-blur-xl md:p-10"
+            aria-label="İletişim formu"
+          >
             <div>
               <p className="eyebrow text-accent">Teklif Formu</p>
               <h2 className="mt-4 font-display text-3xl font-semibold">
-                İhtiyacınızı anlatın, doğru çerçeveyi kuralım.
+                İhtiyacınızı anlatın, doğru çerçeveyi birlikte kuralım.
               </h2>
             </div>
             <div className="mt-8 grid gap-5 md:grid-cols-2">
@@ -68,7 +71,7 @@ export default function ContactPage() {
                 id="message"
                 name="message"
                 rows={6}
-                placeholder="İşinizi, hedefinizi ve sizce mevcut sitede eksik olan tarafı kısaca paylaşabilirsiniz."
+                placeholder="İşinizi, hedefinizi ve mevcut yapıda geliştirilmesini istediğiniz tarafları kısaca paylaşabilirsiniz."
                 className="w-full rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-accent/40 focus:bg-white/10"
               />
             </label>
@@ -103,8 +106,8 @@ export default function ContactPage() {
               <ul className="mt-4 space-y-3 text-sm leading-7 text-slate-300">
                 <li>Kurumsal web sitesi yenileme</li>
                 <li>Landing page tasarımı ve geliştirme</li>
-                <li>Arayüz iyileştirme ve görsel güçlendirme</li>
-                <li>Modern, hızlı ve dark temalı site kurgusu</li>
+                <li>E-ticaret arayüzü ve kullanıcı deneyimi iyileştirme</li>
+                <li>SaaS, randevu ve özel panel projeleri</li>
               </ul>
             </div>
           </div>

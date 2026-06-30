@@ -5,17 +5,17 @@ const steps = [
   {
     title: "Keşif ve yön belirleme",
     description:
-      "Markanın mevcut algısını, hedef kitlesini ve sitenin hangi işi yapması gerektiğini netleştiriyoruz."
+      "Markanın mevcut algısını, hedef kitlesini ve sitenin hangi işi yapması gerektiğini birlikte netleştiriyoruz."
   },
   {
     title: "İçerik ve arayüz kurgusu",
     description:
-      "Başlık yapısı, section sıralaması, görsel ton ve kullanıcı akışı markanın seviyesine göre kuruluyor."
+      "Başlık yapısı, section sıralaması, görsel ton ve kullanıcı akışı markanın seviyesine göre kurgulanıyor."
   },
   {
     title: "Geliştirme ve animasyon katmanı",
     description:
-      "Tasarım sadece görselde kalmıyor; modern arayüz geçişleri, responsive düzen ve performansla üretime taşınıyor."
+      "Tasarım sadece görselde kalmıyor; modern geçişler, responsive düzen ve performansla üretime taşınıyor."
   },
   {
     title: "Yayın ve iyileştirme",

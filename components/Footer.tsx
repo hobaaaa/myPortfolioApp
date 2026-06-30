@@ -8,16 +8,24 @@ const links = [
   { href: "/iletisim", label: "İletişim" }
 ];
 
+const socials = [
+  { href: "https://wa.me/905536662353", label: "WhatsApp" },
+  { href: "https://www.linkedin.com/in/denizgokbudak/", label: "LinkedIn" },
+  { href: "https://github.com/hobaaaa", label: "GitHub" },
+  { href: "/iletisim", label: "Upwork" }
+];
+
 export function Footer() {
   return (
-    <footer className="section-divider py-10">
+    <footer className="section-divider pb-36 pt-12 md:pb-20">
       <div className="shell">
-        <div className="grid gap-10 md:grid-cols-[1.15fr_0.85fr_0.85fr]">
+        <div className="grid gap-10 lg:grid-cols-[1.15fr_0.8fr_0.95fr_0.95fr]">
           <div className="max-w-xl">
             <BrandLogo className="mb-4" />
             <p className="text-sm leading-7 text-slate-400">
-              Markalar için güçlü görsel yön, modern arayüz geliştirme ve
-              profesyonel dijital sunum kurgusu.
+              DG Digital; web tasarım, web geliştirme, WordPress, Next.js,
+              e-ticaret ve SaaS arayüzleri için premium sunum kalitesini teknik
+              disiplinle birleştiren dijital üretim partneridir.
             </p>
           </div>
 
@@ -27,6 +35,23 @@ export function Footer() {
               {links.map((link) => (
                 <Link key={link.href} href={link.href} className="transition hover:text-white">
                   {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <p className="text-sm uppercase tracking-[0.2em] text-accent">Bağlantılar</p>
+            <div className="mt-4 flex flex-col gap-3 text-sm text-slate-400">
+              {socials.map((item) => (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className="transition hover:text-white"
+                  target={item.href.startsWith("http") ? "_blank" : undefined}
+                  rel={item.href.startsWith("http") ? "noreferrer" : undefined}
+                >
+                  {item.label}
                 </Link>
               ))}
             </div>
@@ -43,11 +68,17 @@ export function Footer() {
         </div>
 
         <div className="mt-8 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-6 text-sm text-slate-500">
-          <p>2026 DG Digital. All rights reserved.</p>
+          <p>2026 DG Digital. Tüm hakları saklıdır.</p>
           <div className="flex flex-wrap gap-4">
-            {links.map((link) => (
-              <Link key={`footer-${link.href}`} href={link.href} className="transition hover:text-white">
-                {link.label}
+            {socials.map((item) => (
+              <Link
+                key={`footer-${item.label}`}
+                href={item.href}
+                className="transition hover:text-white"
+                target={item.href.startsWith("http") ? "_blank" : undefined}
+                rel={item.href.startsWith("http") ? "noreferrer" : undefined}
+              >
+                {item.label}
               </Link>
             ))}
           </div>

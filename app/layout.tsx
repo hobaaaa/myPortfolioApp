@@ -1,5 +1,6 @@
 import { FloatingActions } from "@/components/FloatingActions";
 import { Footer } from "@/components/Footer";
+import { MouseGlow } from "@/components/MouseGlow";
 import { Navbar } from "@/components/Navbar";
 import type { Metadata } from "next";
 import "./globals.css";
@@ -11,7 +12,7 @@ const structuredData = {
   "@type": "ProfessionalService",
   name: "DG Digital",
   url: baseUrl,
-  image: `${baseUrl}/logo-dg.svg`,
+  image: `${baseUrl}/logo_seffaf.png`,
   telephone: "+90 553 666 23 53",
   email: "info@denizgokbudak.com",
   areaServed: "TR",
@@ -27,7 +28,8 @@ const structuredData = {
   sameAs: [
     "https://www.linkedin.com/in/denizgokbudak/",
     "https://www.instagram.com/gokbudakdeniz",
-    "https://www.facebook.com/deniz.gokbudak.1/"
+    "https://www.facebook.com/deniz.gokbudak.1/",
+    "https://github.com/hobaaaa"
   ]
 };
 
@@ -90,12 +92,15 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <body className="min-h-screen">
+        <MouseGlow />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         <Navbar />
-        <main className="overflow-hidden pt-20 md:pt-22">{children}</main>
+        <main className="relative z-10 overflow-hidden pt-[5.5rem] md:pt-[5.9rem]">
+          {children}
+        </main>
         <Footer />
         <FloatingActions />
       </body>
