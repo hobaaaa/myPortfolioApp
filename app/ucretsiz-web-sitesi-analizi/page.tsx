@@ -202,7 +202,10 @@ export default function FreeAnalysisPage() {
                     "Önce hangi adımın atılması gerektiğini netleştirip gereksiz karmaşayı ortadan kaldırıyoruz."
                 }
               ].map((item) => (
-                <div key={item.step} className="rounded-[24px] border border-white/10 bg-white/[0.03] p-5">
+                <div
+                  key={item.step}
+                  className="rounded-[24px] border border-white/10 bg-white/[0.03] p-5"
+                >
                   <div className="flex items-center gap-3">
                     <span className="text-xs font-semibold uppercase tracking-[0.22em] text-accent">
                       {item.step}

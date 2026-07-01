@@ -1,0 +1,30 @@
+name: Supabase Heartbeat
+
+on:
+  schedule:
+    - cron: "0 8 * * 1"
+    - cron: "0 8 * * 4"
+  workflow_dispatch:
+
+jobs:
+  heartbeat:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase leads endpoint
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: |
+          if [ -z "$SUPABASE_URL" ] || [ -z "$SUPABASE_ANON_KEY" ]; then
+            echo "SUPABASE_URL or SUPABASE_ANON_KEY is missing."
+            exit 1
+          fi
+
+          curl --fail --silent --show-error \
+            --get "${SUPABASE_URL}/rest/v1/leads" \
+            --header "apikey: ${SUPABASE_ANON_KEY}" \
+            --header "Authorization: Bearer ${SUPABASE_ANON_KEY}" \
+            --header "Accept: application/json" \
+            --data-urlencode "select=id" \
+            --data-urlencode "limit=1" \
+            > /dev/null

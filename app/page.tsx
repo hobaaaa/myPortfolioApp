@@ -1,16 +1,17 @@
+import { AboutPreview } from "@/components/AboutPreview";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import { CTASection } from "@/components/CTASection";
+import { ConversionBanner } from "@/components/ConversionBanner";
 import { FAQSection } from "@/components/FAQSection";
+import { FreeAnalysisHighlight } from "@/components/FreeAnalysisHighlight";
 import { Hero } from "@/components/Hero";
 import { ProcessSection } from "@/components/ProcessSection";
 import { ProjectGrid } from "@/components/ProjectGrid";
 import { SectionTitle } from "@/components/SectionTitle";
+import { StatsSection } from "@/components/StatsSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { ValueStrip } from "@/components/ValueStrip";
 import { projects } from "@/data/projects";
-import { ConversionBanner } from "@/components/ConversionBanner";
-import { StatsSection } from "@/components/StatsSection";
-import { CTASection } from "@/components/CTASection";
-import { AboutPreview } from "@/components/AboutPreview";
 
 const serviceQuickCards = [
   {
@@ -59,6 +60,7 @@ export default function HomePage() {
       <ConversionBanner />
       <ValueStrip />
       <StatsSection />
+      <FreeAnalysisHighlight />
 
       <section className="section-space">
         <div className="shell">
