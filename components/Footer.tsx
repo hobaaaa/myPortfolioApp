@@ -16,6 +16,15 @@ const socials = [
   { href: "/iletisim", label: "Upwork" }
 ];
 
+const legalLinks = [
+  { href: "/gizlilik-politikasi", label: "Gizlilik Politikası" },
+  { href: "/kvkk-aydinlatma-metni", label: "KVKK Aydınlatma Metni" },
+  { href: "/cerez-politikasi", label: "Çerez Politikası" },
+  { href: "/teslimat-ve-hizmet", label: "Teslimat ve Hizmet" },
+  { href: "/satis-politikasi", label: "Satış Politikası" },
+  { href: "/iptal-ve-iade", label: "İptal ve İade" }
+];
+
 export function Footer() {
   return (
     <footer className="section-divider pb-36 pt-12 md:pb-20">
@@ -42,16 +51,10 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="text-sm uppercase tracking-[0.2em] text-accent">Bağlantılar</p>
+            <p className="text-sm uppercase tracking-[0.2em] text-accent">Yasal</p>
             <div className="mt-4 flex flex-col gap-3 text-sm text-slate-400">
-              {socials.map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="transition hover:text-white"
-                  target={item.href.startsWith("http") ? "_blank" : undefined}
-                  rel={item.href.startsWith("http") ? "noreferrer" : undefined}
-                >
+              {legalLinks.map((item) => (
+                <Link key={item.href} href={item.href} className="transition hover:text-white">
                   {item.label}
                 </Link>
               ))}
