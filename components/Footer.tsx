@@ -66,6 +66,7 @@ export function Footer() {
             <div className="mt-4 space-y-3 text-sm text-slate-400">
               <p>info@denizgokbudak.com</p>
               <p>05536662353</p>
+              <p>Değirmenönü Mh. 1739 Sk. No:18 Daire:7 Merkezefendi/DENİZLİ</p>
               <p>Çalışma saatleri: 09:00-18:00</p>
             </div>
           </div>

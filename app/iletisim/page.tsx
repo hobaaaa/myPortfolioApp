@@ -41,6 +41,7 @@ export default function ContactPage() {
               <div className="mt-6 space-y-4 text-slate-200">
                 <p>E-posta: info@denizgokbudak.com</p>
                 <p>Telefon: 05536662353</p>
+                <p>Adres: Değirmenönü Mh. 1739 Sk. No:18 Daire:7 Merkezefendi/DENİZLİ</p>
                 <p>Çalışma saatleri: 09:00-18:00</p>
               </div>
               <Link
