@@ -187,11 +187,9 @@ export default function PrivacyPolicyPage() {
               Son Güncelleme Tarihi: 02 Temmuz 2026
             </p>
             <p className="mt-6 text-sm leading-8 text-slate-300 md:text-base">
-              DG Digital ("Şirket", "biz", "bize" veya "bizim") olarak
-              ziyaretçilerimizin ve müşterilerimizin gizliliğine önem veriyoruz. Bu
-              Gizlilik Politikası, www.denizgokbudak.com adresini ziyaret ettiğinizde
-              hangi bilgilerin toplandığını, bu bilgilerin nasıl kullanıldığını ve
-              nasıl korunduğunu açıklamaktadır.
+              {
+                'DG Digital ("Şirket", "biz", "bize" veya "bizim") olarak ziyaretçilerimizin ve müşterilerimizin gizliliğine önem veriyoruz. Bu Gizlilik Politikası, www.denizgokbudak.com adresini ziyaret ettiğinizde hangi bilgilerin toplandığını, bu bilgilerin nasıl kullanıldığını ve nasıl korunduğunu açıklamaktadır.'
+              }
             </p>
             <p className="mt-4 text-sm leading-8 text-slate-300 md:text-base">
               Web sitemizi kullanarak bu politikada belirtilen uygulamaları kabul etmiş
