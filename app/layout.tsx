@@ -1,11 +1,14 @@
+import { ClarityInit } from "@/components/ClarityInit";
 import { FloatingActions } from "@/components/FloatingActions";
 import { Footer } from "@/components/Footer";
 import { MouseGlow } from "@/components/MouseGlow";
 import { Navbar } from "@/components/Navbar";
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 const baseUrl = "https://denizgokbudak.com";
+const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -98,6 +101,23 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <body className="min-h-screen">
+        <ClarityInit />
+        {gaMeasurementId ? (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${gaMeasurementId}');
+              `}
+            </Script>
+          </>
+        ) : null}
         <MouseGlow />
         <script
           type="application/ld+json"
