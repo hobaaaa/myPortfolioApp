@@ -1,12 +1,14 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import { PortableText } from "next-sanity";
+import { PortableText } from "@portabletext/react";
 import { notFound } from "next/navigation";
 import { CTASection } from "@/components/CTASection";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
+import { getPostMetaDescription, getPostSeoTitle } from "@/sanity/lib/postText";
 import { POST_BY_SLUG_QUERY } from "@/sanity/lib/queries";
 import type { SanityPost } from "@/sanity/lib/types";
+import { portableTextComponents } from "./portableTextComponents";
 
 type PostPageProps = {
   params: Promise<{
@@ -16,13 +18,13 @@ type PostPageProps = {
 
 function formatPublishedAt(value?: string) {
   if (!value) {
-    return "Taslak yayın";
+    return "Yayın planında";
   }
 
   return new Intl.DateTimeFormat("tr-TR", {
     day: "numeric",
     month: "long",
-    year: "numeric"
+    year: "numeric",
   }).format(new Date(value));
 }
 
@@ -31,7 +33,7 @@ async function getPost(slug: string) {
     return await client.fetch<SanityPost | null>(
       POST_BY_SLUG_QUERY,
       { slug },
-      { next: { revalidate: 60 } }
+      { next: { revalidate: 60 } },
     );
   } catch {
     return null;
@@ -39,22 +41,49 @@ async function getPost(slug: string) {
 }
 
 export async function generateMetadata({
-  params
+  params,
 }: PostPageProps): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPost(slug);
 
   if (!post) {
     return {
-      title: "Yazı bulunamadı"
+      title: "Yazı bulunamadı",
     };
   }
 
+  const seoTitle = getPostSeoTitle(post);
+  const metaDescription = getPostMetaDescription(post);
+  const heroImageUrl = post.mainImage
+    ? urlFor(post.mainImage)
+        .width(1200)
+        .height(630)
+        .fit("crop")
+        .auto("format")
+        .url()
+    : undefined;
+
   return {
-    title: post.title || "Yazı",
+    title: seoTitle,
+    description: metaDescription || undefined,
+    openGraph: {
+      title: seoTitle,
+      description: metaDescription || undefined,
+      type: "article",
+      url: `/yazilar/${slug}`,
+      images: heroImageUrl
+        ? [{ url: heroImageUrl, width: 1200, height: 630 }]
+        : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: seoTitle,
+      description: metaDescription || undefined,
+      images: heroImageUrl ? [heroImageUrl] : undefined,
+    },
     alternates: {
-      canonical: `/yazilar/${slug}`
-    }
+      canonical: `/yazilar/${slug}`,
+    },
   };
 }
 
@@ -67,7 +96,12 @@ export default async function PostPage({ params }: PostPageProps) {
   }
 
   const heroImageUrl = post.mainImage
-    ? urlFor(post.mainImage).width(1600).height(900).fit("crop").url()
+    ? urlFor(post.mainImage)
+        .width(1200)
+        .height(675)
+        .fit("crop")
+        .auto("format")
+        .url()
     : null;
 
   return (
@@ -101,55 +135,25 @@ export default async function PostPage({ params }: PostPageProps) {
               <div className="relative mt-10 overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.03]">
                 <Image
                   src={heroImageUrl}
-                  alt={post.title || "Sanity yazısı görseli"}
-                  width={1600}
-                  height={900}
+                  alt={post.title || "Blog yazısı görseli"}
+                  width={1536}
+                  height={1024}
                   className="h-auto w-full object-cover"
                   sizes="(min-width: 1280px) 960px, 100vw"
                 />
               </div>
             ) : null}
 
-            <article className="prose prose-invert mt-10 max-w-none prose-headings:font-display prose-headings:text-white prose-p:text-slate-200 prose-a:text-sky-200 prose-strong:text-white">
+            <article className="article-rich mt-10 max-w-none">
               {post.body?.length ? (
                 <PortableText
                   value={post.body}
-                  components={{
-                    marks: {
-                      link: ({ children, value }) => (
-                        <a
-                          href={value?.href}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          {children}
-                        </a>
-                      )
-                    },
-                    types: {
-                      image: ({ value }) => {
-                        const imageUrl = urlFor(value)
-                          .width(1400)
-                          .fit("max")
-                          .auto("format")
-                          .url();
-
-                        return (
-                          <Image
-                            src={imageUrl}
-                            alt={value.alt || post.title || "Yazı görseli"}
-                            width={1400}
-                            height={900}
-                            className="rounded-[24px]"
-                            sizes="(min-width: 1280px) 960px, 100vw"
-                          />
-                        );
-                      }
-                    }
-                  }}
+                  components={portableTextComponents}
                 />
               ) : (
-                <p>Bu yazıda henüz gövde içeriği bulunmuyor.</p>
+                <p className="article-paragraph text-[1.04rem] leading-8 text-slate-200">
+                  Bu yazıya ait içerik kısa süre içinde yayına alınacaktır.
+                </p>
               )}
             </article>
           </div>

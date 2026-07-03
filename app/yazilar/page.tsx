@@ -3,13 +3,14 @@ import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { client } from "@/sanity/lib/client";
+import { getPostMetaDescription } from "@/sanity/lib/postText";
 import { POSTS_QUERY } from "@/sanity/lib/queries";
 import type { SanityPost } from "@/sanity/lib/types";
 
 export const metadata: Metadata = {
-  title: "Yazılar",
+  title: "Web Tasarım ve Dijital Pazarlama Yazıları",
   description:
-    "DG Digital'in Sanity üzerinden yönettiği içerikleri, içgörüleri ve yayınlarını keşfedin.",
+    "DG Digital'in web tasarım, dijital pazarlama, SEO ve marka konumlandırması odaklı yazılarını keşfedin.",
   alternates: {
     canonical: "/yazilar"
   }
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
 
 function formatPublishedAt(value?: string) {
   if (!value) {
-    return "Taslak yayın";
+    return "Yayın planında";
   }
 
   return new Intl.DateTimeFormat("tr-TR", {
@@ -43,9 +44,9 @@ export default async function PostsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Yazılar"
-        title="Sanity Studio üzerinden yönetilen içerikler."
-        description="Bu alan, `studio-dg-digital` içindeki mevcut `post` şemasını kullanır. Yeni yazılar eklendikçe burada otomatik olarak listelenir."
+        eyebrow="Blog"
+        title="Web Tasarım ve Dijital Pazarlama Yazıları"
+        description="Web tasarım, dijital pazarlama, SEO, kullanıcı deneyimi ve marka konumlandırması üzerine seçili DG Digital yazıları."
       />
 
       <section className="section-space">
@@ -77,12 +78,10 @@ export default async function PostsPage() {
                     </div>
                   ) : null}
                   <p className="mt-5 text-sm leading-7 text-slate-300">
-                    Detay sayfasında Sanity Portable Text içeriği tam olarak render edilir.
+                    {getPostMetaDescription(post) ||
+                      "Web tasarım, dijital görünürlük ve dönüşüm odaklı büyüme üzerine profesyonel içgörüler."}
                   </p>
-                  <Link
-                    href={`/yazilar/${post.slug}`}
-                    className="button-secondary mt-7 inline-flex"
-                  >
+                  <Link href={`/yazilar/${post.slug}`} className="button-secondary mt-7 inline-flex">
                     Yazıyı Oku
                   </Link>
                 </article>
@@ -90,15 +89,12 @@ export default async function PostsPage() {
             </div>
           ) : (
             <div className="rounded-[30px] border border-dashed border-white/15 bg-white/[0.025] p-8 text-slate-200">
-              <p className="text-sm uppercase tracking-[0.22em] text-sky-100/70">
-                İçerik hazır
-              </p>
+              <p className="text-sm uppercase tracking-[0.22em] text-sky-100/70">Blog</p>
               <h2 className="mt-4 font-display text-3xl font-semibold text-white">
-                Henüz yayınlanmış yazı görünmüyor.
+                Bu kategoride şu anda yayınlanmış içerik bulunmuyor.
               </h2>
               <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-300">
-                `studio-dg-digital` içindeki Sanity Studio içinde bir `post`
-                dokümanı yayınladığınızda bu sayfa otomatik olarak dolacaktır.
+                Yeni yazılar yayınlandıkça bu alanda web tasarım, dijital pazarlama ve büyüme odaklı içerikler yer alacaktır.
               </p>
             </div>
           )}

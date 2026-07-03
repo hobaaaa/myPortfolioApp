@@ -20,7 +20,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="Hakkımızda"
         title="Amacımız yalnızca site teslim etmek değil; markayı dijitalde daha güçlü konumlandırmak."
-        description="DG Digital, premium sunum anlayışı ve temiz geliştirme disipliniyle ajans mantığında ilerleyen bir dijital üretim yapısıdır."
+        description="DG Digital, premium sunum anlayışı ve temiz geliştirme disipliniyle ajans yaklaşımında ilerleyen bir dijital üretim yapısıdır."
       />
 
       <section className="section-space">
@@ -28,14 +28,14 @@ export default function AboutPage() {
           <div className="rounded-[30px] border border-white/10 bg-white/[0.035] p-8 shadow-panel backdrop-blur-xl md:p-10">
             <SectionTitle
               eyebrow="Kiminle Çalışıyorsunuz?"
-              title="Ekranın arkasında, işi doğrudan üreten gerçek bir iletişim vardır."
-              description="Bu yapı büyük ekip karmaşası yaratmadan; tasarım, geliştirme ve stratejik kararların aynı çatı altında ilerlemesini sağlar."
+              title="Ekranın arkasında, işi doğrudan üreten net bir iletişim ve karar yapısı vardır."
+              description="Bu yapı; tasarım, geliştirme ve stratejik kararların tek çizgide ilerlemesini sağlayarak süreci gereksiz karmaşa olmadan yönetir."
             />
             <div className="mt-6 grid gap-4 sm:grid-cols-3">
               <div className="rounded-[24px] border border-white/10 bg-white/[0.03] p-4">
-                <p className="text-sm font-semibold text-white">Küçük Hikâye</p>
+                <p className="text-sm font-semibold text-white">Üretim Disiplini</p>
                 <p className="mt-2 text-sm leading-6 text-slate-300">
-                  Tasarım ve yazılımı aynı disiplin içinde ele alan üretim yaklaşımı.
+                  Tasarım ve yazılımı aynı kalite standardında bir araya getiren odaklı üretim yaklaşımı.
                 </p>
               </div>
               <div className="rounded-[24px] border border-white/10 bg-white/[0.03] p-4">
@@ -66,14 +66,13 @@ export default function AboutPage() {
             </div>
             <div className="absolute bottom-8 left-8 right-8 rounded-[24px] border border-white/10 bg-[#071320]/80 p-5 backdrop-blur">
               <p className="text-xs uppercase tracking-[0.22em] text-sky-100/80">
-                Kurucu . Gelecekte profesyonel portre ile güncellenebilir
+                Kurucu • Strateji ve üretim
               </p>
               <h2 className="mt-2 font-display text-2xl font-semibold text-white">
                 Deniz Gökbudak
               </h2>
               <p className="mt-2 text-sm leading-7 text-slate-300">
-                Web tasarım, WordPress ve Next.js ekseninde çalışan; estetik
-                kararları teknik kaliteyle birleştiren üretim yaklaşımı.
+                Web tasarım, WordPress ve Next.js ekseninde çalışan; estetik kararları teknik kaliteyle birleştiren üretim yaklaşımı.
               </p>
             </div>
           </div>

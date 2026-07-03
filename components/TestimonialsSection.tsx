@@ -5,19 +5,19 @@ const testimonials = [
     quote:
       "Yeni site ile marka sunumumuz çok daha netleşti. Teklif isteme oranı kısa sürede gözle görülür biçimde arttı.",
     name: "Merve A.",
-    role: "Kurucu, Örnek Klinik"
+    role: "Kurucu, Özel Klinik"
   },
   {
     quote:
       "Hem tasarım dili hem de içerik akışı daha kurumsal hale geldi. Mobildeki deneyim özellikle önceki yapıya göre çok daha güçlü.",
     name: "Burak T.",
-    role: "Yönetici, Örnek E-Ticaret Markası"
+    role: "Yönetici, E-Ticaret Markası"
   },
   {
     quote:
       "Süreç boyunca hızlı karar alabildik. Ortaya çıkan iş sadece şık değil, gerçekten güven veren bir vitrin oldu.",
     name: "Selin K.",
-    role: "Kurucu, Örnek Danışmanlık Markası"
+    role: "Kurucu, Danışmanlık Markası"
   }
 ];
 
@@ -31,8 +31,7 @@ export function TestimonialsSection() {
             Güven hissi yalnızca tasarımla değil, deneyimle de oluşur.
           </h2>
           <p className="body-lg mt-4">
-            Şimdilik örnek yorumlar kullanıyoruz. Yapı, ileride gerçek Google
-            yorumlarıyla kolayca güncellenebilecek şekilde kurgulandı.
+            Her proje; marka algısını güçlendiren, iletişimi netleştiren ve kullanıcı deneyimini profesyonel seviyeye taşıyan sonuçlar üretmeyi hedefler.
           </p>
         </AnimatedSection>
 

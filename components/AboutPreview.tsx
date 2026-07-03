@@ -20,7 +20,7 @@ export function AboutPreview() {
             </div>
             <div className="absolute bottom-6 left-6 right-6 rounded-[24px] border border-white/10 bg-[#071320]/78 p-4 backdrop-blur">
               <p className="text-xs uppercase tracking-[0.22em] text-sky-100/80">
-                Kurucu . Gelecekte güncellenebilir fotoğraf alanı
+                Kurucu • Strateji ve üretim
               </p>
               <p className="mt-2 text-lg font-semibold text-white">Deniz Gökbudak</p>
               <p className="mt-1 text-sm text-slate-300">DG Digital</p>
@@ -31,22 +31,21 @@ export function AboutPreview() {
         <AnimatedSection delay={0.08}>
           <p className="eyebrow text-accent">Hakkımızda</p>
           <h2 className="heading-lg mt-3">
-            Kurumsal görünümün arkasında, doğrudan üretimin içinde olan gerçek bir ekip yaklaşımı var.
+            Kurumsal görünümün arkasında, üretimin her aşamasını doğrudan yöneten net bir uzmanlık bulunur.
           </h2>
           <p className="body-lg mt-4">
-            DG Digital; web tasarım ve yazılımı yalnızca teslim edilecek bir çıktı
-            olarak değil, markanın dijitalde nasıl algılanacağını belirleyen temel
-            bir yatırım olarak ele alır.
+            DG Digital; web tasarım ve yazılımı yalnızca teslim edilecek bir çıktı olarak değil,
+            markanın dijitalde nasıl algılanacağını belirleyen stratejik bir yatırım olarak ele alır.
           </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-3">
             <div className="rounded-[24px] border border-white/10 bg-white/[0.03] p-4">
-              <p className="text-sm font-semibold text-white">Küçük Hikâye</p>
+              <p className="text-sm font-semibold text-white">Yaklaşım</p>
               <p className="mt-2 text-sm leading-6 text-slate-300">
-                Tasarım disipliniyle başlayan, yazılım tarafında olgunlaşan bir üretim çizgisi.
+                Tasarım, yazılım ve içerik kararlarını aynı kalite çizgisinde birleştiren üretim modeli.
               </p>
             </div>
             <div className="rounded-[24px] border border-white/10 bg-white/[0.03] p-4">
-              <p className="text-sm font-semibold text-white">Yaklaşım</p>
+              <p className="text-sm font-semibold text-white">Çalışma Biçimi</p>
               <p className="mt-2 text-sm leading-6 text-slate-300">
                 Az toplantı, net karar, hızlı uygulama ve yüksek sunum kalitesi.
               </p>
@@ -54,7 +53,7 @@ export function AboutPreview() {
             <div className="rounded-[24px] border border-white/10 bg-white/[0.03] p-4">
               <p className="text-sm font-semibold text-white">Misyon</p>
               <p className="mt-2 text-sm leading-6 text-slate-300">
-                Markalara daha güvenilir, daha güçlü ve daha dönüşüm odaklı bir dijital vitrin kazandırmak.
+                Markalara daha güçlü, daha güvenilir ve daha dönüşüm odaklı bir dijital vitrin kazandırmak.
               </p>
             </div>
           </div>

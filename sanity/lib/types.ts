@@ -14,6 +14,8 @@ export type SanityCategory = {
 export type SanityPost = {
   _id: string;
   title?: string;
+  seoTitle?: string;
+  metaDescription?: string;
   slug?: string;
   publishedAt?: string;
   body?: PortableTextBlock[];

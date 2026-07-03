@@ -23,7 +23,7 @@ const structuredData = {
       url: baseUrl,
       logo: {
         "@type": "ImageObject",
-        url: `${baseUrl}/logo_seffaf.png`,
+        url: `${baseUrl}/logo_seffaf.png`
       },
       image: `${baseUrl}/logo_seffaf.png`,
       email: "info@denizgokbudak.com",
@@ -33,13 +33,13 @@ const structuredData = {
         streetAddress: "Değirmenönü Mh. 1739 Sk. No:18 Daire:7",
         addressLocality: "Merkezefendi",
         addressRegion: "Denizli",
-        addressCountry: "TR",
+        addressCountry: "TR"
       },
       sameAs: [
         "https://www.linkedin.com/in/denizgokbudak/",
         "https://www.instagram.com/gokbudakdeniz",
         "https://www.facebook.com/deniz.gokbudak.1/",
-        "https://github.com/hobaaaa",
+        "https://github.com/hobaaaa"
       ],
       contactPoint: [
         {
@@ -48,9 +48,9 @@ const structuredData = {
           email: "info@denizgokbudak.com",
           telephone: "+90 553 666 23 53",
           areaServed: "TR",
-          availableLanguage: ["tr", "en"],
-        },
-      ],
+          availableLanguage: ["tr", "en"]
+        }
+      ]
     },
     {
       "@type": "WebSite",
@@ -58,11 +58,11 @@ const structuredData = {
       url: baseUrl,
       name: "DG Digital",
       description:
-        "Denizli’de kurumsal web tasarım, SEO, e-ticaret ve özel yazılım çözümleri sunan DG Digital ile işletmeniz için profesyonel dijital altyapı kurun.",
+        "Denizli'de kurumsal web tasarım, SEO, e-ticaret ve özel yazılım çözümleri sunan DG Digital ile işletmeniz için profesyonel dijital altyapı kurun.",
       publisher: {
-        "@id": organizationId,
+        "@id": organizationId
       },
-      inLanguage: "tr-TR",
+      inLanguage: "tr-TR"
     },
     {
       "@type": "ProfessionalService",
@@ -73,11 +73,11 @@ const structuredData = {
       description:
         "Denizli web tasarım, SEO, e-ticaret ve özel yazılım çözümleri sunan dijital üretim partneri.",
       provider: {
-        "@id": organizationId,
+        "@id": organizationId
       },
       areaServed: {
         "@type": "Country",
-        name: "Turkey",
+        name: "Turkey"
       },
       availableLanguage: ["tr", "en"],
       serviceType: [
@@ -86,19 +86,19 @@ const structuredData = {
         "SEO",
         "E-Ticaret Sistemleri",
         "Özel Yazılım",
-        "SaaS Arayüz Geliştirme",
+        "SaaS Arayüz Geliştirme"
       ],
       address: {
         "@type": "PostalAddress",
         streetAddress: "Değirmenönü Mh. 1739 Sk. No:18 Daire:7",
         addressLocality: "Merkezefendi",
         addressRegion: "Denizli",
-        addressCountry: "TR",
+        addressCountry: "TR"
       },
       email: "info@denizgokbudak.com",
-      telephone: "+90 553 666 23 53",
-    },
-  ],
+      telephone: "+90 553 666 23 53"
+    }
+  ]
 };
 
 export const metadata: Metadata = {
@@ -106,10 +106,10 @@ export const metadata: Metadata = {
   applicationName: "DG Digital",
   title: {
     default: "Denizli Web Tasarım & Denizli Yazılım | DG Digital",
-    template: "%s | DG Digital",
+    template: "%s | DG Digital"
   },
   description:
-    "Denizli’de kurumsal web tasarım, SEO, e-ticaret ve özel yazılım çözümleri sunan DG Digital ile işletmeniz için profesyonel dijital altyapı kurun.",
+    "Denizli'de kurumsal web tasarım, SEO, e-ticaret ve özel yazılım çözümleri sunan DG Digital ile işletmeniz için profesyonel dijital altyapı kurun.",
   keywords: [
     "denizli web tasarım",
     "denizli yazılım",
@@ -121,22 +121,22 @@ export const metadata: Metadata = {
     "e-ticaret sistemi",
     "özel yazılım",
     "kurumsal web sitesi",
-    "dg digital",
+    "dg digital"
   ],
   openGraph: {
     title: "Denizli Web Tasarım & Denizli Yazılım | DG Digital",
     description:
-      "Denizli’de kurumsal web tasarım, SEO, e-ticaret ve özel yazılım çözümleri sunan DG Digital ile işletmeniz için profesyonel dijital altyapı kurun.",
+      "Denizli'de kurumsal web tasarım, SEO, e-ticaret ve özel yazılım çözümleri sunan DG Digital ile işletmeniz için profesyonel dijital altyapı kurun.",
     url: baseUrl,
     siteName: "DG Digital",
     locale: "tr_TR",
-    type: "website",
+    type: "website"
   },
   twitter: {
     card: "summary_large_image",
     title: "Denizli Web Tasarım & Denizli Yazılım | DG Digital",
     description:
-      "Denizli’de kurumsal web tasarım, SEO, e-ticaret ve özel yazılım çözümleri sunan DG Digital ile işletmeniz için profesyonel dijital altyapı kurun.",
+      "Denizli'de kurumsal web tasarım, SEO, e-ticaret ve özel yazılım çözümleri sunan DG Digital ile işletmeniz için profesyonel dijital altyapı kurun."
   },
   robots: {
     index: true,
@@ -146,21 +146,21 @@ export const metadata: Metadata = {
       follow: true,
       "max-video-preview": -1,
       "max-image-preview": "large",
-      "max-snippet": -1,
-    },
+      "max-snippet": -1
+    }
   },
   alternates: {
-    canonical: "/",
+    canonical: "/"
   },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
-  },
+    apple: "/favicon.ico"
+  }
 };
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {

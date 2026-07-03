@@ -10,17 +10,17 @@ const steps = [
   {
     title: "İçerik ve arayüz kurgusu",
     description:
-      "Başlık yapısı, section sıralaması, görsel ton ve kullanıcı akışı markanın seviyesine göre kurgulanıyor."
+      "Başlık yapısı, bölüm sıralaması, görsel ton ve kullanıcı akışı markanın seviyesine göre kurgulanır."
   },
   {
-    title: "Geliştirme ve animasyon katmanı",
+    title: "Geliştirme ve deneyim katmanı",
     description:
-      "Tasarım sadece görselde kalmıyor; modern geçişler, responsive düzen ve performansla üretime taşınıyor."
+      "Tasarım yalnızca görselde kalmaz; modern geçişler, responsive düzen ve performans odaklı geliştirme ile üretime taşınır."
   },
   {
-    title: "Yayın ve iyileştirme",
+    title: "Yayın ve optimizasyon",
     description:
-      "Son kontrol sonrası yayına alıyor, gerekirse sonraki geliştirme adımlarını da net şekilde planlıyoruz."
+      "Son kontroller tamamlandıktan sonra proje yayına alınır ve performansı güçlendiren iyileştirmeler planlı şekilde sürdürülür."
   }
 ];
 
