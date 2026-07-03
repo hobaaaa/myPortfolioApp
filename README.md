@@ -23,6 +23,7 @@ The site is structured as a marketing website rather than a dashboard or app pro
 - `TypeScript`
 - `Tailwind CSS`
 - `Framer Motion`
+- `Sanity Studio` as a standalone sibling app
 
 ## Project Structure
 
@@ -31,8 +32,36 @@ app/           App Router pages
 components/    Reusable UI sections and layout blocks
 data/          Static content for services, projects, and values
 public/        Images and brand assets
+sanity/        Sanity client, queries, and helpers
 scripts/       Local development helper scripts
 ```
+
+## Sanity Setup
+
+The frontend app is connected to the standalone Studio in the sibling folder:
+
+```txt
+../studio-dg-digital
+```
+
+This app reads from:
+
+- project: `rw7lkf1r`
+- dataset: `production`
+
+Public Sanity environment variables are stored in `.env.local`:
+
+```bash
+NEXT_PUBLIC_SANITY_PROJECT_ID=rw7lkf1r
+NEXT_PUBLIC_SANITY_DATASET=production
+NEXT_PUBLIC_SANITY_API_VERSION=2026-07-03
+NEXT_PUBLIC_SANITY_STUDIO_URL=http://localhost:3333
+```
+
+The current integration surfaces Studio `post` documents at:
+
+- `/yazilar`
+- `/yazilar/[slug]`
 
 ## Getting Started
 
