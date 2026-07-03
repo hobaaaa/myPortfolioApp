@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import type { Metadata } from "next";
 import { PortableText } from "@portabletext/react";
 import { notFound } from "next/navigation";
@@ -18,7 +18,7 @@ type PostPageProps = {
 
 function formatPublishedAt(value?: string) {
   if (!value) {
-    return "Yayın planında";
+    return "YayÄ±n planÄ±nda";
   }
 
   return new Intl.DateTimeFormat("tr-TR", {
@@ -48,7 +48,7 @@ export async function generateMetadata({
 
   if (!post) {
     return {
-      title: "Yazı bulunamadı",
+      title: "YazÄ± bulunamadÄ±",
     };
   }
 
@@ -115,7 +115,7 @@ export default async function PostPage({ params }: PostPageProps) {
             </div>
 
             <h1 className="mt-5 font-display text-4xl font-semibold leading-tight text-white md:text-6xl">
-              {post.title || "İsimsiz yazı"}
+              {post.title || "Ä°simsiz yazÄ±"}
             </h1>
 
             {post.categories?.length ? (
@@ -135,9 +135,9 @@ export default async function PostPage({ params }: PostPageProps) {
               <div className="relative mt-10 overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.03]">
                 <Image
                   src={heroImageUrl}
-                  alt={post.title || "Blog yazısı görseli"}
-                  width={1536}
-                  height={1024}
+                  alt={post.title || "Blog yazÄ±sÄ± gÃ¶rseli"}
+                  width={1200}
+                  height={675}
                   className="h-auto w-full object-cover"
                   sizes="(min-width: 1280px) 960px, 100vw"
                 />
@@ -152,7 +152,7 @@ export default async function PostPage({ params }: PostPageProps) {
                 />
               ) : (
                 <p className="article-paragraph text-[1.04rem] leading-8 text-slate-200">
-                  Bu yazıya ait içerik kısa süre içinde yayına alınacaktır.
+                  Bu yazÄ±ya ait iÃ§erik kÄ±sa sÃ¼re iÃ§inde yayÄ±na alÄ±nacaktÄ±r.
                 </p>
               )}
             </article>
@@ -164,3 +164,4 @@ export default async function PostPage({ params }: PostPageProps) {
     </>
   );
 }
+
