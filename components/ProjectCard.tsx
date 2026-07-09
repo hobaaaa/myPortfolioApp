@@ -41,15 +41,21 @@ export function ProjectCard({ project }: ProjectCardProps) {
             className="object-cover object-center transform-gpu transition duration-500 group-hover:scale-[1.012]"
             sizes="(min-width: 1280px) 30vw, (min-width: 768px) 45vw, 100vw"
           />
-          <div className="absolute left-6 top-6 rounded-full border border-white/10 bg-[#071320]/82 px-3 py-1 text-xs uppercase tracking-[0.18em] text-white">
+          <div className="absolute left-6 top-6 rounded-full border border-white/10 bg-[#071320]/82 px-3 py-1 text-xs uppercase tracking-[0.18em] bg-black/[55%] text-white">
             {project.category}
           </div>
         </div>
 
         <div className="flex flex-1 flex-col p-6 md:p-7">
-          <h3 className="font-display text-2xl font-semibold">{project.title}</h3>
-          <p className="mt-3 text-sm leading-7 text-slate-300">{project.summary}</p>
-          <p className="mt-5 text-sm font-medium text-accentStrong">{project.outcome}</p>
+          <h3 className="font-display text-2xl font-semibold">
+            {project.title}
+          </h3>
+          <p className="mt-3 text-sm leading-7 text-slate-300">
+            {project.summary}
+          </p>
+          <p className="mt-5 text-sm font-medium text-accentStrong">
+            {project.outcome}
+          </p>
 
           <div className="pointer-events-auto mt-5">
             <button
@@ -59,7 +65,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
               aria-expanded={open}
               aria-controls={`${project.slug}-case-study`}
             >
-              <span className="text-sm font-medium text-sky-100">Neler Yaptık</span>
+              <span className="text-sm font-medium text-sky-100">
+                Neler Yaptık
+              </span>
               <svg
                 viewBox="0 0 24 24"
                 className={`h-4 w-4 text-sky-100 transition duration-300 ${open ? "rotate-180" : ""}`}
@@ -73,11 +81,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
             </button>
 
             {open ? (
-              <div id={`${project.slug}-case-study`} className="mt-3 grid gap-3">
+              <div
+                id={`${project.slug}-case-study`}
+                className="mt-3 grid gap-3"
+              >
                 {[
                   { label: "Amaç", value: project.challenge },
                   { label: "Çözüm", value: project.solution },
-                  { label: "Sonuç", value: project.result }
+                  { label: "Sonuç", value: project.result },
                 ].map((item) => (
                   <div
                     key={item.label}
@@ -86,7 +97,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
                     <p className="text-[11px] uppercase tracking-[0.22em] text-sky-100/75">
                       {item.label}
                     </p>
-                    <p className="mt-2 text-sm leading-6 text-slate-200">{item.value}</p>
+                    <p className="mt-2 text-sm leading-6 text-slate-200">
+                      {item.value}
+                    </p>
                   </div>
                 ))}
               </div>

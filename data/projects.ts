@@ -15,57 +15,63 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Liora House",
-    slug: "liora-house",
+    title: "Makros Otomasyon",
+    slug: "makros-otomasyon",
     category: "Kurumsal Web Sitesi",
     summary:
-      "Butik otelin premium konumlanmasını destekleyen, rezervasyon niyeti yaratan ve mobilde güçlü hissettiren bir web sitesi deneyimi.",
-    outcome: "Daha üst segment marka algısı ve daha net rezervasyon akışı",
-    image: "/images/case-hotel.png",
-    imageAlt: "Butik otel markası için hazırlanmış premium kurumsal web sitesi arayüzü",
-    highlights: ["WordPress/Next.js yapı", "Konumlandırma", "Mobil rezervasyon akışı"],
+      "Endüstriyel otomasyon alanındaki uzmanlığını güçlü bir dijital kimlikle yansıtan, güven oluşturan ve potansiyel müşterilerin hizmetlere hızlıca ulaşmasını sağlayan kurumsal web sitesi deneyimi.",
+    outcome: "Daha güçlü kurumsal algı ve daha profesyonel ilk izlenim",
+    image: "/images/makros-otomasyon.png",
+    imageAlt: "Makros Otomasyon için tasarlanmış kurumsal web sitesi arayüzü",
+    highlights: [
+      "WordPress Altyapısı",
+      "Responsive Tasarım",
+      "Performans Optimizasyonu",
+    ],
     challenge:
-      "Marka üst segment görünmek istiyordu ancak mevcut dijital sunum bu hissi yeterince taşımıyordu.",
+      "Firmanın teknik uzmanlığını ve sektördeki deneyimini yansıtan profesyonel bir dijital vitrine ihtiyacı vardı. Mevcut yapı güven veren kurumsal kimliği yeterince desteklemiyordu.",
     solution:
-      "Daha rafine görsel dil, temiz içerik akışı ve rezervasyon niyetini güçlendiren mobil yapı kuruldu.",
+      "Markanın kurumsal kimliğine uygun modern bir arayüz tasarlanarak hizmet odaklı bilgi mimarisi oluşturuldu. Responsive yapı, performans optimizasyonu ve kullanıcı odaklı içerik akışıyla ziyaretçilerin ihtiyaç duydukları bilgilere hızlıca ulaşmaları sağlandı.",
     result:
-      "Daha güçlü ilk izlenim, daha net rezervasyon akışı ve daha premium marka algısı oluştu.",
-    href: "/portfolio#liora-house"
+      "Makros Otomasyon'un dijital marka algısı güçlendirildi, kurumsal güven hissi artırıldı ve potansiyel müşterilerin firma hakkında daha hızlı bilgi edinmesini sağlayan modern bir web deneyimi oluşturuldu.",
+    href: "/portfolio#makros-otomasyon",
   },
   {
-    title: "Meridien Clinic",
-    slug: "meridien-clinic",
-    category: "Landing Page",
+    title: "BY Damla Su Teknolojileri",
+    slug: "by-damla-su-teknolojileri",
+    category: "Kurumsal Web Sitesi",
     summary:
-      "Kliniğin hizmetlerini daha güvenilir gösteren ve başvuru talebini sadeleştiren odaklı landing page kurgusu.",
-    outcome: "Daha temiz mesaj yapısı ve daha kısa başvuru yolu",
-    image: "/images/case-clinic.png",
-    imageAlt: "Sağlık kliniği için hazırlanmış dönüşüm odaklı landing page tasarımı",
-    highlights: ["Lead UX", "Güven blokları", "Randevu odaklı yapı"],
+      "Su arıtma teknolojileri alanındaki uzmanlığını güven veren bir dijital deneyimle buluşturan, hizmet ve ürünlerini modern bir yapıda sunan kurumsal web sitesi.",
+    outcome: "Daha güçlü kurumsal güven ve daha kolay hizmet talebi süreci",
+    image: "/images/bydamla-su-teknolojileri.png",
+    imageAlt:
+      "BY Damla Su Teknolojileri için tasarlanmış kurumsal web sitesi arayüzü",
+    highlights: ["WordPress", "Responsive Tasarım", "Hizmet Odaklı UX"],
     challenge:
-      "Hizmetler doğru anlatılmasına rağmen ziyaretçi için karar verme süreci yeterince hızlı değildi.",
+      "Firma; ürünlerini, hizmetlerini ve teknik uzmanlığını tek bir platformda güven veren ve profesyonel bir şekilde sunabileceği modern bir web sitesine ihtiyaç duyuyordu.",
     solution:
-      "Başlık akışı, güven blokları ve form yönlendirmesi daha kısa ve daha ikna edici hale getirildi.",
+      "Kurumsal kimliği destekleyen modern bir arayüz, hizmet odaklı bilgi mimarisi ve güçlü çağrı aksiyonlarıyla ziyaretçilerin ihtiyaç duydukları çözümlere hızlıca ulaşabilecekleri kullanıcı deneyimi tasarlandı.",
     result:
-      "Başvuru yolculuğu sadeleşti, mesaj daha netleşti ve form odaklı dönüşüm zemini güçlendi.",
-    href: "/portfolio#meridien-clinic"
+      "Markanın dijital görünürlüğü güçlendirildi, kurumsal güven algısı artırıldı ve potansiyel müşterilerin teklif alma ve iletişim süreçleri daha erişilebilir hale getirildi.",
+    href: "/portfolio#by-damla-su-teknolojileri",
   },
   {
-    title: "Aurel Edit",
-    slug: "aurel-edit",
-    category: "E-Ticaret Arayüzü",
+    title: "Safir Yapı",
+    slug: "safir-yapi",
+    category: "Kurumsal Web Sitesi",
     summary:
-      "Lifestyle markasının ürünlerini katalog gibi değil, editoryal bir deneyim olarak sunan premium e-ticaret vitrini.",
-    outcome: "Daha güçlü ürün sunumu ve daha rafine satın alma hissi",
-    image: "/images/case-commerce.png",
-    imageAlt: "Premium lifestyle markası için hazırlanmış e-ticaret arayüz tasarımı",
-    highlights: ["E-ticaret vitrin", "Luxury UI", "Responsive commerce"],
+      "Havuz yapımı ve peyzaj projelerini güçlü görsellerle öne çıkaran, hizmetlerini güven veren bir yapıda sunan modern kurumsal web sitesi.",
+    outcome: "Daha güçlü proje sunumu ve daha profesyonel marka algısı",
+    image: "/images/safir-yapi.png",
+    imageAlt:
+      "Safir Yapı için tasarlanmış havuz yapımı odaklı kurumsal web sitesi arayüzü",
+    highlights: ["WordPress", "Proje Odaklı UX", "Responsive Tasarım"],
     challenge:
-      "Ürünler güçlüydü ancak dijital vitrin marka seviyesini ve satın alma hissini yeterince taşımıyordu.",
+      "Firmanın tamamladığı projeler yüksek kaliteye sahip olmasına rağmen dijital sunum, bu kaliteyi ve uzmanlığı yeterince yansıtmıyordu. Ziyaretçilerin hizmetleri ve referans projeleri hızlıca inceleyebileceği modern bir deneyime ihtiyaç vardı.",
     solution:
-      "Editoryal düzen, güçlü ürün görselleri ve daha akışkan responsive e-ticaret deneyimi kurgulandı.",
+      "Projeleri ön plana çıkaran görsel odaklı bir arayüz, sade bilgi mimarisi ve mobil uyumlu kullanıcı deneyimi tasarlanarak ziyaretçilerin hizmetlere ve iletişim kanallarına daha hızlı ulaşması sağlandı.",
     result:
-      "Ürün sunumu güçlendi, marka algısı yükseldi ve satın alma deneyimi daha rafine hale geldi.",
-    href: "/portfolio#aurel-edit"
-  }
+      "Markanın dijital vitrini modernleştirildi, tamamlanan projelerin sunumu güçlendirildi ve potansiyel müşteriler için daha güven veren bir ilk izlenim oluşturuldu.",
+    href: "/portfolio#safir-yapi",
+  },
 ];
