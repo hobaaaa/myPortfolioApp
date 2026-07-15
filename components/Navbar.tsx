@@ -1,6 +1,5 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
 import { BrandLogo } from "@/components/BrandLogo";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -101,47 +100,38 @@ export function Navbar() {
             </div>
           </div>
 
-          <AnimatePresence>
-            {menuOpen ? (
-              <motion.div
-                id="mobile-menu"
-                initial={{ opacity: 0, y: -8 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -8 }}
-                transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
-                className="pt-3 lg:hidden"
-              >
-                <div className="rounded-[22px] border border-white/10 bg-[#091728]/92 p-3 shadow-panel">
-                  <div className="flex flex-col gap-2">
-                    {links.map((link) => {
-                      const active = pathname === link.href;
-                      return (
-                        <Link
-                          key={link.href}
-                          href={link.href}
-                          onClick={() => setMenuOpen(false)}
-                          className={`rounded-2xl px-4 py-3 text-[15px] font-medium transition ${
-                            active
-                              ? "bg-accent text-slate-950"
-                              : "text-slate-200 hover:bg-white/8"
-                          }`}
-                        >
-                          {link.label}
-                        </Link>
-                      );
-                    })}
-                  </div>
-                  <Link
-                    href="/iletisim"
-                    className="button-primary mt-4 w-full"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    Teklif Al
-                  </Link>
+          {menuOpen ? (
+            <div id="mobile-menu" className="mobile-menu-panel pt-3 lg:hidden">
+              <div className="rounded-[22px] border border-white/10 bg-[#091728]/92 p-3 shadow-panel">
+                <div className="flex flex-col gap-2">
+                  {links.map((link) => {
+                    const active = pathname === link.href;
+                    return (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setMenuOpen(false)}
+                        className={`rounded-2xl px-4 py-3 text-[15px] font-medium transition ${
+                          active
+                            ? "bg-accent text-slate-950"
+                            : "text-slate-200 hover:bg-white/8"
+                        }`}
+                      >
+                        {link.label}
+                      </Link>
+                    );
+                  })}
                 </div>
-              </motion.div>
-            ) : null}
-          </AnimatePresence>
+                <Link
+                  href="/iletisim"
+                  className="button-primary mt-4 w-full"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Teklif Al
+                </Link>
+              </div>
+            </div>
+          ) : null}
         </div>
       </div>
     </header>

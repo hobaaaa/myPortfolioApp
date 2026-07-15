@@ -18,6 +18,7 @@ export function BrandLogo({ compact = false, className = "" }: BrandLogoProps) {
         width={width}
         height={height}
         priority={compact}
+        fetchPriority={compact ? "high" : undefined}
       />
     </Link>
   );

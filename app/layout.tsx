@@ -1,4 +1,4 @@
-import { ClarityInit } from "@/components/ClarityInit";
+import { BackToTopButton } from "@/components/BackToTopButton";
 import { FloatingActions } from "@/components/FloatingActions";
 import { Footer } from "@/components/Footer";
 import { MouseGlow } from "@/components/MouseGlow";
@@ -167,23 +167,67 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <body className="min-h-screen">
-        <ClarityInit />
         {gaMeasurementId ? (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
-              strategy="afterInteractive"
-            />
-            <Script id="google-analytics" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${gaMeasurementId}');
-              `}
-            </Script>
-          </>
+          <Script id="google-analytics" strategy="lazyOnload">
+            {`
+              (() => {
+                const measurementId = '${gaMeasurementId}';
+                if (!measurementId || window.__dgGaLoaded) return;
+
+                const loadAnalytics = () => {
+                  if (window.__dgGaLoaded) return;
+                  window.__dgGaLoaded = true;
+
+                  const script = document.createElement('script');
+                  script.async = true;
+                  script.src = 'https://www.googletagmanager.com/gtag/js?id=' + measurementId;
+                  script.onload = () => {
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){window.dataLayer.push(arguments);}
+                    window.gtag = gtag;
+                    gtag('js', new Date());
+                    gtag('config', measurementId);
+                  };
+                  document.head.appendChild(script);
+                };
+
+                if ('requestIdleCallback' in window) {
+                  requestIdleCallback(loadAnalytics, { timeout: 2500 });
+                } else {
+                  setTimeout(loadAnalytics, 1800);
+                }
+              })();
+            `}
+          </Script>
         ) : null}
+        <Script id="clarity-init" strategy="lazyOnload">
+          {`
+            (() => {
+              const projectId = '${process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID ?? ""}';
+              if (!projectId || window.__dgClarityLoaded) return;
+
+              const loadClarity = () => {
+                if (window.__dgClarityLoaded) return;
+                window.__dgClarityLoaded = true;
+
+                (function(c,l,a,r,i,t,y){
+                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                  t=l.createElement(r);
+                  t.async=1;
+                  t.src='https://www.clarity.ms/tag/' + i;
+                  y=l.getElementsByTagName(r)[0];
+                  y.parentNode.insertBefore(t,y);
+                })(window, document, 'clarity', 'script', projectId);
+              };
+
+              if ('requestIdleCallback' in window) {
+                requestIdleCallback(loadClarity, { timeout: 4500 });
+              } else {
+                setTimeout(loadClarity, 3200);
+              }
+            })();
+          `}
+        </Script>
         <MouseGlow />
         <script
           type="application/ld+json"
@@ -195,6 +239,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <FloatingActions />
+        <BackToTopButton />
       </body>
     </html>
   );

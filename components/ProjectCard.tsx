@@ -1,9 +1,5 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import type { MouseEvent } from "react";
 import type { Project } from "@/data/projects";
 
 type ProjectCardProps = {
@@ -12,12 +8,6 @@ type ProjectCardProps = {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   const targetHref = project.href ?? `/portfolio#${project.slug}`;
-  const [open, setOpen] = useState(false);
-
-  const toggleCaseStudy = (event: MouseEvent<HTMLButtonElement>) => {
-    event.stopPropagation();
-    setOpen((value) => !value);
-  };
 
   return (
     <article
@@ -57,20 +47,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
             {project.outcome}
           </p>
 
-          <div className="pointer-events-auto mt-5">
-            <button
-              type="button"
-              onClick={toggleCaseStudy}
-              className="flex w-full items-center justify-between rounded-[20px] border border-white/10 bg-white/[0.03] px-4 py-3 text-left transition duration-300 hover:border-accent/25 hover:bg-white/[0.05]"
-              aria-expanded={open}
-              aria-controls={`${project.slug}-case-study`}
-            >
+          <details className="group pointer-events-auto mt-5">
+            <summary className="flex w-full cursor-pointer list-none items-center justify-between rounded-[20px] border border-white/10 bg-white/[0.03] px-4 py-3 text-left transition duration-300 hover:border-accent/25 hover:bg-white/[0.05]">
               <span className="text-sm font-medium text-sky-100">
                 Neler Yaptık
               </span>
               <svg
                 viewBox="0 0 24 24"
-                className={`h-4 w-4 text-sky-100 transition duration-300 ${open ? "rotate-180" : ""}`}
+                className="h-4 w-4 text-sky-100 transition duration-300 group-open:rotate-180"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="1.8"
@@ -78,33 +62,28 @@ export function ProjectCard({ project }: ProjectCardProps) {
               >
                 <path d="M6 9l6 6 6-6" />
               </svg>
-            </button>
+            </summary>
 
-            {open ? (
-              <div
-                id={`${project.slug}-case-study`}
-                className="mt-3 grid gap-3"
-              >
-                {[
-                  { label: "Amaç", value: project.challenge },
-                  { label: "Çözüm", value: project.solution },
-                  { label: "Sonuç", value: project.result },
-                ].map((item) => (
-                  <div
-                    key={item.label}
-                    className="rounded-[20px] border border-white/10 bg-white/[0.03] p-4 transition duration-300 group-hover:border-accent/15"
-                  >
-                    <p className="text-[11px] uppercase tracking-[0.22em] text-sky-100/75">
-                      {item.label}
-                    </p>
-                    <p className="mt-2 text-sm leading-6 text-slate-200">
-                      {item.value}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            ) : null}
-          </div>
+            <div className="mt-3 grid gap-3">
+              {[
+                { label: "Amaç", value: project.challenge },
+                { label: "Çözüm", value: project.solution },
+                { label: "Sonuç", value: project.result }
+              ].map((item) => (
+                <div
+                  key={item.label}
+                  className="rounded-[20px] border border-white/10 bg-white/[0.03] p-4 transition duration-300 group-hover:border-accent/15"
+                >
+                  <p className="text-[11px] uppercase tracking-[0.22em] text-sky-100/75">
+                    {item.label}
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-slate-200">
+                    {item.value}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </details>
 
           <div className="mt-5 flex flex-wrap gap-2">
             {project.highlights.map((item) => (

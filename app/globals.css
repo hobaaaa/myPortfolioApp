@@ -48,6 +48,17 @@ body {
   }
 }
 
+@keyframes mobileMenuFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @layer components {
   .hero-fade-up {
     opacity: 0;
@@ -59,10 +70,18 @@ body {
     animation-delay: 0.08s;
   }
 
+  .mobile-menu-panel {
+    animation: mobileMenuFade 0.24s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .hero-fade-up {
       opacity: 1;
       transform: none;
+      animation: none;
+    }
+
+    .mobile-menu-panel {
       animation: none;
     }
   }
