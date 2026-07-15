@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { AnimatedSection } from "@/components/AnimatedSection";
 
 const trustPoints = [
   "Kurumsal sunumla güven veren web deneyimleri",
@@ -87,7 +86,7 @@ export function Hero() {
     <section className="relative pb-8 pt-5 md:pb-10 md:pt-7">
       <div className="shell">
         <div className="grid items-center gap-8 lg:grid-cols-[0.96fr_1.04fr] lg:gap-10">
-          <AnimatedSection className="relative">
+          <div className="hero-fade-up relative">
             <div className="absolute -left-6 top-6 hidden h-32 w-32 rounded-full bg-accentDeep/30 blur-3xl md:block" />
             <p className="eyebrow">
               Web Tasarım . Web Geliştirme . WordPress . Next.js
@@ -141,9 +140,9 @@ export function Hero() {
                 </div>
               ))}
             </div>
-          </AnimatedSection>
+          </div>
 
-          <AnimatedSection delay={0.08} className="relative">
+          <div className="hero-fade-up hero-fade-up-delay relative">
             <div className="absolute -right-4 top-8 h-40 w-40 rounded-full bg-accent/20 blur-3xl" />
             <div className="relative overflow-hidden rounded-[34px] border border-white/10 bg-white/[0.04] p-3 shadow-panel">
               <div className="relative aspect-[16/11] overflow-hidden rounded-[28px] bg-[#08111d]">
@@ -201,7 +200,7 @@ export function Hero() {
                 </div>
               </div>
             </div>
-          </AnimatedSection>
+          </div>
         </div>
       </div>
     </section>
