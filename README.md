@@ -1,4 +1,4 @@
-# DG Digital Portfolio Website
+﻿# DG Digital Portfolio Website
 
 Modern, dark themed portfolio and service website for `DG Digital`.
 
@@ -74,21 +74,21 @@ npm install
 Run the development server:
 
 ```bash
-npm.cmd run dev
+npm run dev
 ```
 
 Note for Windows PowerShell:
 
 - `npm run dev` may fail depending on local `ExecutionPolicy`
-- `npm.cmd run dev` is the safer option
+- `npm run dev` works across Windows, macOS, and Linux
 
 ## Available Scripts
 
 ```bash
-npm.cmd run dev
-npm.cmd run dev:raw
-npm.cmd run build
-npm.cmd run start
+npm run dev
+npm run dev:raw
+npm run build
+npm run start
 ```
 
 ### Why `dev` uses a custom launcher
@@ -108,7 +108,7 @@ This helper exists to reduce local `.next` corruption issues by:
 If you explicitly want the raw Next.js command, use:
 
 ```bash
-npm.cmd run dev:raw
+npm run dev:raw
 ```
 
 ## Content Editing
@@ -135,7 +135,7 @@ If the final brand package becomes available later, the logo and image system ca
 Production build:
 
 ```bash
-npm.cmd run build
+npm run build
 ```
 
 ## Deployment
@@ -151,3 +151,4 @@ This project is suitable for static-style or server-rendered deployment on platf
 GitHub repository:
 
 `https://github.com/hobaaaa/myPortfolioApp`
+
