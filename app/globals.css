@@ -1,4 +1,4 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -74,11 +74,31 @@ body {
     animation: mobileMenuFade 0.24s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
+  .reveal-section {
+    opacity: 0;
+    transform: translateY(34px) scale(0.985);
+    filter: blur(8px);
+    transition:
+      opacity 720ms ease,
+      transform 720ms ease,
+      filter 720ms ease;
+    will-change: opacity, transform, filter;
+  }
+
+  .reveal-section.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+
   @media (prefers-reduced-motion: reduce) {
-    .hero-fade-up {
+    .hero-fade-up,
+    .reveal-section {
       opacity: 1;
       transform: none;
+      filter: none;
       animation: none;
+      transition: none;
     }
 
     .mobile-menu-panel {
@@ -174,4 +194,3 @@ body {
     @apply my-10 overflow-x-auto rounded-[28px] border border-white/10 bg-slate-950/90 p-5 text-sm leading-7 text-sky-100 shadow-panel;
   }
 }
-

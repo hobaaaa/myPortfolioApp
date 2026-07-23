@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ArtexoSpotlight } from "@/components/ArtexoSpotlight";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { ProjectGrid } from "@/components/ProjectGrid";
@@ -69,6 +70,7 @@ export default function PortfolioPage() {
           <ProjectGrid projects={projects} />
         </div>
       </section>
+      <ArtexoSpotlight />
       <section className="pb-10 md:pb-12">
         <div className="shell grid gap-4 md:grid-cols-3">
           {portfolioSupportCards.map((item) => (
@@ -92,3 +94,5 @@ export default function PortfolioPage() {
     </>
   );
 }
+
+

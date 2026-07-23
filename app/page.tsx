@@ -1,4 +1,5 @@
-import { AboutPreview } from "@/components/AboutPreview";
+﻿import { AboutPreview } from "@/components/AboutPreview";
+import { ArtexoSpotlight } from "@/components/ArtexoSpotlight";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { CTASection } from "@/components/CTASection";
 import { ConversionBanner } from "@/components/ConversionBanner";
@@ -42,7 +43,7 @@ export default function HomePage() {
           />
           <div className="grid gap-4 md:grid-cols-3">
             {serviceQuickCards.map((service, index) => (
-              <AnimatedSection key={service.title} delay={index * 0.07}>
+              <AnimatedSection key={service.title} delay={index * 0.08}>
                 <div className="soft-line-card h-full p-5">
                   <p className="text-xs uppercase tracking-[0.2em] text-accent">
                     {service.label}
@@ -61,6 +62,7 @@ export default function HomePage() {
       <ValueStrip />
       <StatsSection />
       <FreeAnalysisHighlight />
+      <ArtexoSpotlight compact />
 
       <section className="section-space">
         <div className="shell">

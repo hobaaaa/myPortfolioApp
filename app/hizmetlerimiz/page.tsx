@@ -1,5 +1,6 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import type { Metadata } from "next";
+import { ArtexoSpotlight } from "@/components/ArtexoSpotlight";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { ServiceGrid } from "@/components/ServiceGrid";
@@ -50,7 +51,7 @@ function ServicesHeroMockup() {
         <div className="grid gap-4 p-4 md:grid-cols-[1.05fr_0.95fr]">
           <div className="relative min-h-[240px] overflow-hidden rounded-[22px] border border-white/10 bg-[#0b1a2d]">
             <Image
-              src="/images/case-commerce.png"
+              src="/images/hero-studio.png"
               alt="DG Digital hizmetler sayfası için örnek web arayüzü görseli"
               fill
               className="object-cover"
@@ -110,6 +111,8 @@ export default function ServicesPage() {
           <ServiceGrid services={services} />
         </div>
       </section>
+
+      <ArtexoSpotlight />
 
       <section className="section-space">
         <div className="shell">
